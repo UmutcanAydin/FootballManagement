@@ -177,6 +177,7 @@ public class main {
 		mongoClient.close();
 	}
 	
+	Object objectId;
 	public void mongoDatabaseFindPres() throws Exception {
 		
 		MongoClient mongoClient = new MongoClient();
@@ -203,8 +204,31 @@ public class main {
 		    txtPresDoB.setText(dateofbirth);
 		    txtPresTeam.setEnabled(true);
 		    txtPresTeam.setText(team);
+		    if(!txtPresName.getText().equals("")) {
+		    	objectId = (Object) president.get("_id");
+		    }
 
 		}
+		
+		mongoClient.close();
+	}
+	
+	public void mongoDatabaseUpdatePres() throws Exception {
+		
+		MongoClient mongoClient = new MongoClient();
+		DB database = mongoClient.getDB("tmar");
+		DBCollection collection = database.getCollection("presidents");
+		
+		BasicDBObject updateFields = new BasicDBObject();
+		updateFields.append("name", txtPresName.getText());
+		updateFields.append("surname", txtPresSurname.getText());
+		updateFields.append("dateofbirth", txtPresDoB.getText());
+		updateFields.append("team", txtPresTeam.getText());
+		BasicDBObject setQuery = new BasicDBObject();
+		setQuery.append("$set", updateFields);
+		BasicDBObject searchQuery = new BasicDBObject().append("_id", objectId);
+		collection.update(searchQuery, setQuery);
+		
 		
 		mongoClient.close();
 	}
@@ -795,6 +819,16 @@ public class main {
 		pPres.add(txtPresFindName);
 		
 		JButton btnPresUpdate = new JButton("Update");
+		btnPresUpdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					mongoDatabaseUpdatePres();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 		btnPresUpdate.setEnabled(false);
 		btnPresUpdate.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnPresUpdate.setBounds(523, 387, 117, 35);
@@ -805,6 +839,7 @@ public class main {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					mongoDatabaseFindPres();
+					
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
