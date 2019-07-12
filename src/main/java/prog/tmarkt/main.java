@@ -143,26 +143,6 @@ public class main {
 			mongoClient.close();
 		}
 		else if(tabbedPane.getSelectedIndex() == 1) {
-			DBObject team = new BasicDBObject()
-                    .append("name", txtTName.getText())
-                    .append("president", txtTPres.getText())
-                    .append("city", txtTCity.getText())
-					.append("stadium",txtTStadium.getText())
-					.append("championshipyears",txtTChampYears.getText())
-					.append("cups", txtTCups.getText())
-					.append("colors",txtTColors.getText())
-					.append("formationdate",ftxtTFormDate.getText())
-					.append("league",txtTLeague.getText())
-					.append("lastmatch",txtTLastMatch.getText())
-					.append("score",txtTScore.getText());
-			MongoClient mongoClient = new MongoClient();
-			DB database = mongoClient.getDB("tmar");
-			DBCollection collection = database.getCollection("teams");
-			collection.insert(team);
-			mongoClient.close();
-		}
-		
-		else if(tabbedPane.getSelectedIndex() == 0) {
 			DBObject player = new BasicDBObject()
                     .append("name", txtPName.getText())
                     .append("surname", txtPSurname.getText())
@@ -179,6 +159,27 @@ public class main {
 			DB database = mongoClient.getDB("tmar");
 			DBCollection collection = database.getCollection("players");
 			collection.insert(player);
+			mongoClient.close();
+		}
+		
+		else if(tabbedPane.getSelectedIndex() == 0) {
+		
+			DBObject team = new BasicDBObject()
+                    .append("name", txtTName.getText())
+                    .append("president", txtTPres.getText())
+                    .append("city", txtTCity.getText())
+					.append("stadium",txtTStadium.getText())
+					.append("championshipyears",txtTChampYears.getText())
+					.append("cups", txtTCups.getText())
+					.append("colors",txtTColors.getText())
+					.append("formationdate",ftxtTFormDate.getText())
+					.append("league",txtTLeague.getText())
+					.append("lastmatch",txtTLastMatch.getText())
+					.append("score",txtTScore.getText());
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("teams");
+			collection.insert(team);
 			mongoClient.close();
 		}
 	
@@ -266,6 +267,62 @@ public class main {
 
 			mongoClient.close();
 			
+		}else if(tabbedPane.getSelectedIndex() == 0) {
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("teams");
+			
+			BasicDBObject whereQuery = new BasicDBObject();
+			whereQuery.put("name", txtTFind.getText());
+			DBCursor cursor = collection.find(whereQuery);
+			while(cursor.hasNext()) {
+				
+				DBObject team = cursor.next();
+			    System.out.println(team);
+			    
+			    String name = (String) team.get("name");
+			    String president = (String) team.get("president");
+			    String city = (String) team.get("city");
+			    String stadium = (String) team.get("stadium");
+			    String championshipyears = (String) team.get("championshipyears");
+			    String cups = (String) team.get("cups");
+			    String colors = (String) team.get("colors");
+			    String formationdate = (String) team.get("formationdate");
+			    String league = (String) team.get("league");
+			    String lastmatch = (String) team.get("lastmatch");
+			    String score = (String) team.get("score");
+			 
+			    txtTName.setEnabled(true);
+			    txtTName.setText(name);
+			    txtTPres.setEnabled(true);
+			    txtTPres.setText(president);
+			    txtTCity.setEnabled(true);
+			    txtTCity.setText(city);
+			    txtTStadium.setEnabled(true);
+			    txtTStadium.setText(stadium);
+			    txtTChampYears.setEnabled(true);
+			    txtTChampYears.setText(championshipyears);
+			    txtTCups.setEnabled(true);
+			    txtTCups.setText(cups);
+			    txtTColors.setEnabled(true);
+			    txtTColors.setText(colors);
+			    ftxtTFormDate.setEnabled(true);
+			    ftxtTFormDate.setText(formationdate);
+			    txtTLeague.setEnabled(true);
+			    txtTLeague.setText(league);
+			    txtTLastMatch.setEnabled(true);
+			    txtTLastMatch.setText(lastmatch);
+			    txtTScore.setEnabled(true);
+			    txtTScore.setText(score);
+			    
+			    if(!txtTName.getText().equals("")) {
+			    	objectId = (Object) team.get("_id");
+			    }
+
+			}
+
+			mongoClient.close();
+			
 		}
 	}
 	
@@ -306,6 +363,30 @@ public class main {
 			BasicDBObject searchQuery = new BasicDBObject().append("_id", objectId);
 			collection.update(searchQuery, setQuery);
 			
+			mongoClient.close();
+		}
+		else if(tabbedPane.getSelectedIndex() == 0) {
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("teams");
+			
+			BasicDBObject updateFields = new BasicDBObject();
+			updateFields.append("name", txtTName.getText());
+			updateFields.append("president", txtTPres.getText());
+			updateFields.append("city", txtTCity.getText());
+			updateFields.append("stadium", txtTStadium.getText());
+			updateFields.append("championshipyears", txtTChampYears.getText());
+			updateFields.append("cups", txtTCups.getText());
+			updateFields.append("colors", txtTColors.getText());
+			updateFields.append("formationdate", ftxtTFormDate.getText());
+			updateFields.append("league", txtTLeague.getText());
+			updateFields.append("lastmatch", txtTLastMatch.getText());
+			updateFields.append("score", txtTScore.getText());
+			
+			BasicDBObject setQuery = new BasicDBObject();
+			setQuery.append("$set", updateFields);
+			BasicDBObject searchQuery = new BasicDBObject().append("_id", objectId);
+			collection.update(searchQuery, setQuery);
 			mongoClient.close();
 		}
 			
@@ -485,24 +566,23 @@ public class main {
 		ftxtTFormDate.setBounds(594, 175, 120, 19);
 		pTeam.add(ftxtTFormDate);
 		
-		JCheckBox chckboxTFind = new JCheckBox("Find");
-		chckboxTFind.setFont(new Font("Tahoma", Font.BOLD, 12));
-		chckboxTFind.setBounds(52, 17, 60, 21);
-		pTeam.add(chckboxTFind);
-		
 		JLabel lblTFind = new JLabel("Name :");
 		lblTFind.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
 		lblTFind.setEnabled(false);
 		lblTFind.setBounds(250, 31, 66, 35);
 		pTeam.add(lblTFind);
 		
-		txtTFind = new JTextField();
-		txtTFind.setEnabled(false);
-		txtTFind.setColumns(10);
-		txtTFind.setBounds(335, 41, 195, 19);
-		pTeam.add(txtTFind);
-		
 		JButton btnTFind = new JButton("Find");
+		btnTFind.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					mongoDatabaseFind();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 		btnTFind.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		btnTFind.setEnabled(false);
 		btnTFind.setBounds(540, 40, 66, 19);
@@ -511,12 +591,115 @@ public class main {
 		JButton btnTeamUpdate = new JButton("Update");
 		btnTeamUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
+					mongoDatabaseUpdate();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnTeamUpdate.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnTeamUpdate.setEnabled(false);
 		btnTeamUpdate.setBounds(523, 387, 117, 35);
 		pTeam.add(btnTeamUpdate);
+		
+		JCheckBox chckboxTFind = new JCheckBox("Find");
+		chckboxTFind.setFont(new Font("Tahoma", Font.BOLD, 12));
+		chckboxTFind.setBounds(52, 17, 60, 21);
+		pTeam.add(chckboxTFind);		
+		chckboxTFind.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(chckboxTFind.isSelected()) {
+					txtTName.setEnabled(false);
+					txtTName.setText("");
+					txtTChampYears.setEnabled(false);
+					txtTChampYears.setText("");
+					txtTCity.setEnabled(false);
+					txtTCity.setText("");
+					txtTColors.setEnabled(false);
+					txtTColors.setText("");
+					txtTCups.setEnabled(false);
+					txtTCups.setText("");
+					txtTLastMatch.setEnabled(false);
+					txtTLastMatch.setText("");
+					txtTLeague.setEnabled(false);
+					txtTLeague.setText("");
+					txtTPres.setEnabled(false);
+					txtTPres.setText("");
+					txtTScore.setEnabled(false);
+					txtTScore.setText("");
+					txtTStadium.setEnabled(false);
+					txtTStadium.setText("");
+					ftxtTFormDate.setEnabled(false);
+					ftxtTFormDate.setText("");
+					lblName_1.setEnabled(false);
+					lblChampionshipYears.setEnabled(false);
+					lblCity.setEnabled(false);
+					lblColors.setEnabled(false);
+					lblCups.setEnabled(false);
+					lblLastMatch.setEnabled(false);
+					lblLeague.setEnabled(false);
+					lblPresident.setEnabled(false);
+					lblSrore.setEnabled(false);
+					lblStadium.setEnabled(false);
+					lblFormationDate.setEnabled(false);
+					lblTFind.setEnabled(true);
+					txtTFind.setEnabled(true);
+					btnTFind.setEnabled(true);
+					btnTSubmit.setEnabled(false);
+					btnTeamUpdate.setEnabled(true);
+				}else {
+					txtTName.setEnabled(true);
+					txtTName.setText("");
+					txtTChampYears.setEnabled(true);
+					txtTChampYears.setText("");
+					txtTCity.setEnabled(true);
+					txtTCity.setText("");
+					txtTColors.setEnabled(true);
+					txtTColors.setText("");
+					txtTCups.setEnabled(true);
+					txtTCups.setText("");
+					txtTLastMatch.setEnabled(true);
+					txtTLastMatch.setText("");
+					txtTLeague.setEnabled(true);
+					txtTLeague.setText("");
+					txtTPres.setEnabled(true);
+					txtTPres.setText("");
+					txtTScore.setEnabled(true);
+					txtTScore.setText("");
+					txtTStadium.setEnabled(true);
+					txtTStadium.setText("");
+					ftxtTFormDate.setEnabled(true);
+					ftxtTFormDate.setText("");
+					lblName_1.setEnabled(true);
+					lblChampionshipYears.setEnabled(true);
+					lblCity.setEnabled(true);
+					lblColors.setEnabled(true);
+					lblCups.setEnabled(true);
+					lblLastMatch.setEnabled(true);
+					lblLeague.setEnabled(true);
+					lblPresident.setEnabled(true);
+					lblSrore.setEnabled(true);
+					lblStadium.setEnabled(true);
+					lblFormationDate.setEnabled(true);
+					lblTFind.setEnabled(false);
+					txtTFind.setEnabled(false);
+					txtTFind.setText("");
+					btnTFind.setEnabled(false);
+					btnTSubmit.setEnabled(true);
+					btnTeamUpdate.setEnabled(false);
+				}
+			}
+		});
+		
+		
+		txtTFind = new JTextField();
+		txtTFind.setEnabled(false);
+		txtTFind.setColumns(10);
+		txtTFind.setBounds(335, 41, 195, 19);
+		pTeam.add(txtTFind);
 		
 		JPanel pPlayer = new JPanel();
 		tabbedPane.addTab("Player", null, pPlayer, null);
