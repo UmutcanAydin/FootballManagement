@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
+import javax.naming.ldap.Rdn;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JTabbedPane;
@@ -16,6 +17,8 @@ import java.text.SimpleDateFormat;
 import java.util.Enumeration;
 
 import javax.swing.JTextField;
+import javax.swing.text.TabExpander;
+
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -34,10 +37,13 @@ public class main {
 	private JTextField txtPresName;
 	private JTextField txtPresSurname;
 	private JTextField txtPresTeam;
-	JFormattedTextField txtPresDoB;
-	JFormattedTextField ftxtTFormDate;
-	JFormattedTextField txtManDoB;
-	JFormattedTextField txtfPDoB;
+	private JFormattedTextField txtPresDoB;
+	private JFormattedTextField ftxtTFormDate;
+	private JFormattedTextField txtManDoB;
+	private JFormattedTextField txtfPDoB;
+	JRadioButton rdbtnInHand;
+	JRadioButton rdbtnNotInHand;
+	private JTabbedPane tabbedPane;
 	private JTextField txtManName;
 	private JTextField txtManSurname;
 	private JTextField txtManCTeam;
@@ -59,11 +65,14 @@ public class main {
 	private JTextField txtPPrevTeams;
 	private JTextField txtPRealTeam;
 	private JTextField txtPAmount;
-	JTextArea txtaPInjuries;
-	ButtonGroup feeMButtons;
-	ButtonGroup bgrentorbought;
-	ButtonGroup bgleftrightboth;
-	ButtonGroup bginhandornot;
+	private JTextField txtManFindName;
+	private JTextField txtPFind;
+	private JTextField txtTFind;
+	private JTextArea txtaPInjuries;
+	private ButtonGroup feeMButtons;
+	private ButtonGroup bgrentorbought;
+	private ButtonGroup bgleftrightboth;
+	private ButtonGroup bginhandornot;
 	private JTextField txtPresFindName;
 
 	/**
@@ -104,133 +113,202 @@ public class main {
         return null;
     }
 
-	public void mongoDatabaseaddPres() throws Exception {
-		
-		DBObject president = new BasicDBObject()
-		                            .append("name", txtPresName.getText())
-		                            .append("surname", txtPresSurname.getText())
-		                            .append("dateofbirth", txtPresDoB.getText())
-									.append("team",txtPresTeam.getText());
-		MongoClient mongoClient = new MongoClient();
-		DB database = mongoClient.getDB("tmar");
-		DBCollection collection = database.getCollection("presidents");
-		collection.insert(president);
-		mongoClient.close();
-	}
-	
-	public void mongoDatabaseaddManager() throws Exception {
-		
-		DBObject manager = new BasicDBObject()
-		                            .append("name", txtManName.getText())
-		                            .append("surname", txtManSurname.getText())
-		                            .append("dateofbirth", txtManDoB.getText())
-									.append("currentteam",txtManCTeam.getText())
-									.append("previousteam",txtManPTeam.getText())
-									.append("tranferfee",getSelectedButtonText(feeMButtons))
-									.append("amount",txtManAmount.getText());
-		MongoClient mongoClient = new MongoClient();
-		DB database = mongoClient.getDB("tmar");
-		DBCollection collection = database.getCollection("managers");
-		collection.insert(manager);
-		mongoClient.close();
-	}
-	
-	public void mongoDatabaseaddTeam() throws Exception {
-		
-		DBObject team = new BasicDBObject()
-		                            .append("name", txtTName.getText())
-		                            .append("president", txtTPres.getText())
-		                            .append("city", txtTCity.getText())
-									.append("stadium",txtTStadium.getText())
-									.append("championshipyears",txtTChampYears.getText())
-									.append("cups", txtTCups.getText())
-									.append("colors",txtTColors.getText())
-									.append("formationdate",ftxtTFormDate.getText())
-									.append("league",txtTLeague.getText())
-									.append("lastmatch",txtTLastMatch.getText())
-									.append("score",txtTScore.getText());
-		MongoClient mongoClient = new MongoClient();
-		DB database = mongoClient.getDB("tmar");
-		DBCollection collection = database.getCollection("teams");
-		collection.insert(team);
-		mongoClient.close();
-	}
-	
-	public void mongoDatabaseaddPlayer() throws Exception {
-		
-		DBObject player = new BasicDBObject()
-		                            .append("name", txtPName.getText())
-		                            .append("surname", txtPSurname.getText())
-		                            .append("dateofbirth", txtfPDoB.getText())
-									.append("currentteam",txtPCurrentTeam.getText())
-									.append("previousteam",txtPPrevTeams.getText())
-									.append("status",getSelectedButtonText(bgrentorbought))
-									.append("realteam",txtPRealTeam.getText())
-									.append("dominantfoot",getSelectedButtonText(bgleftrightboth))
-									.append("tranferfee",getSelectedButtonText(bginhandornot))
-									.append("amount",txtPAmount.getText())
-									.append("injuries",txtaPInjuries.getText());
-		MongoClient mongoClient = new MongoClient();
-		DB database = mongoClient.getDB("tmar");
-		DBCollection collection = database.getCollection("players");
-		collection.insert(player);
-		mongoClient.close();
-	}
-	
-	Object objectId;
-	public void mongoDatabaseFindPres() throws Exception {
-		
-		MongoClient mongoClient = new MongoClient();
-		DB database = mongoClient.getDB("tmar");
-		DBCollection collection = database.getCollection("presidents");
-		
-		BasicDBObject whereQuery = new BasicDBObject();
-		whereQuery.put("name", txtPresFindName.getText());
-		DBCursor cursor = collection.find(whereQuery);
-		while(cursor.hasNext()) {
-			
-			DBObject president = cursor.next();
-		    System.out.println(president);
-		    
-		    String name = (String) president.get("name");
-		    String surname = (String) president.get("surname");
-		    String dateofbirth = (String) president.get("dateofbirth");
-		    String team = (String) president.get("team");
-		    txtPresName.setEnabled(true);
-		    txtPresName.setText(name);
-		    txtPresSurname.setEnabled(true);
-		    txtPresSurname.setText(surname);
-		    txtPresDoB.setEnabled(true);
-		    txtPresDoB.setText(dateofbirth);
-		    txtPresTeam.setEnabled(true);
-		    txtPresTeam.setText(team);
-		    if(!txtPresName.getText().equals("")) {
-		    	objectId = (Object) president.get("_id");
-		    }
+	public void mongoDatabaseadd() throws Exception {
+		if(tabbedPane.getSelectedIndex() == 3) {
+			DBObject president = new BasicDBObject()
+                    .append("name", txtPresName.getText())
+                    .append("surname", txtPresSurname.getText())
+                    .append("dateofbirth", txtPresDoB.getText())
+					.append("team",txtPresTeam.getText());
 
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("presidents");
+			collection.insert(president);
+			mongoClient.close();
+		}
+		else if(tabbedPane.getSelectedIndex() == 2) {
+			DBObject manager = new BasicDBObject()
+                    .append("name", txtManName.getText())
+                    .append("surname", txtManSurname.getText())
+                    .append("dateofbirth", txtManDoB.getText())
+					.append("currentteam",txtManCTeam.getText())
+					.append("previousteam",txtManPTeam.getText())
+					.append("transferfee",getSelectedButtonText(feeMButtons))
+					.append("amount",txtManAmount.getText());
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("managers");
+			collection.insert(manager);
+			mongoClient.close();
+		}
+		else if(tabbedPane.getSelectedIndex() == 1) {
+			DBObject team = new BasicDBObject()
+                    .append("name", txtTName.getText())
+                    .append("president", txtTPres.getText())
+                    .append("city", txtTCity.getText())
+					.append("stadium",txtTStadium.getText())
+					.append("championshipyears",txtTChampYears.getText())
+					.append("cups", txtTCups.getText())
+					.append("colors",txtTColors.getText())
+					.append("formationdate",ftxtTFormDate.getText())
+					.append("league",txtTLeague.getText())
+					.append("lastmatch",txtTLastMatch.getText())
+					.append("score",txtTScore.getText());
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("teams");
+			collection.insert(team);
+			mongoClient.close();
 		}
 		
-		mongoClient.close();
+		else if(tabbedPane.getSelectedIndex() == 0) {
+			DBObject player = new BasicDBObject()
+                    .append("name", txtPName.getText())
+                    .append("surname", txtPSurname.getText())
+                    .append("dateofbirth", txtfPDoB.getText())
+					.append("currentteam",txtPCurrentTeam.getText())
+					.append("previousteam",txtPPrevTeams.getText())
+					.append("status",getSelectedButtonText(bgrentorbought))
+					.append("realteam",txtPRealTeam.getText())
+					.append("dominantfoot",getSelectedButtonText(bgleftrightboth))
+					.append("transferfee",getSelectedButtonText(bginhandornot))
+					.append("amount",txtPAmount.getText())
+					.append("injuries",txtaPInjuries.getText());
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("players");
+			collection.insert(player);
+			mongoClient.close();
+		}
+	
+	}
+		
+	Object objectId;
+	public void mongoDatabaseFind() throws Exception {
+		if(tabbedPane.getSelectedIndex() == 3) {
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("presidents");
+			
+			BasicDBObject whereQuery = new BasicDBObject();
+			whereQuery.put("name", txtPresFindName.getText());
+			DBCursor cursor = collection.find(whereQuery);
+			while(cursor.hasNext()) {
+				
+				DBObject president = cursor.next();
+			    System.out.println(president);
+			    
+			    String name = (String) president.get("name");
+			    String surname = (String) president.get("surname");
+			    String dateofbirth = (String) president.get("dateofbirth");
+			    String team = (String) president.get("team");
+			    txtPresName.setEnabled(true);
+			    txtPresName.setText(name);
+			    txtPresSurname.setEnabled(true);
+			    txtPresSurname.setText(surname);
+			    txtPresDoB.setEnabled(true);
+			    txtPresDoB.setText(dateofbirth);
+			    txtPresTeam.setEnabled(true);
+			    txtPresTeam.setText(team);
+			    if(!txtPresName.getText().equals("")) {
+			    	objectId = (Object) president.get("_id");
+			    }
+
+			}
+
+			mongoClient.close();
+			
+		}else if(tabbedPane.getSelectedIndex() == 2) {
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("managers");
+			
+			BasicDBObject whereQuery = new BasicDBObject();
+			whereQuery.put("name", txtManFindName.getText());
+			DBCursor cursor = collection.find(whereQuery);
+			while(cursor.hasNext()) {
+				
+				DBObject manager = cursor.next();
+			    System.out.println(manager);
+			    
+			    String name = (String) manager.get("name");
+			    String surname = (String) manager.get("surname");
+			    String dateofbirth = (String) manager.get("dateofbirth");
+			    String currentteam = (String) manager.get("currentteam");
+			    String previousteam = (String) manager.get("previousteam");
+			    String transferfee = (String) manager.get("transferfee");
+			    String amount = (String) manager.get("amount");
+			    rdbtnInHand.setEnabled(true);
+			    rdbtnNotInHand.setEnabled(true);
+			    if(transferfee.equals("In Hand")) {
+			    	rdbtnInHand.setSelected(true);
+			    }else if(transferfee.equals("Not In Hand")){
+			    	rdbtnNotInHand.setSelected(true);
+			    }
+			    txtManName.setEnabled(true);
+			    txtManName.setText(name);
+			    txtManSurname.setEnabled(true);
+			    txtManSurname.setText(surname);
+			    txtManDoB.setEnabled(true);
+			    txtManDoB.setText(dateofbirth);
+			    txtManCTeam.setEnabled(true);
+			    txtManCTeam.setText(currentteam);
+			    txtManPTeam.setEnabled(true);
+			    txtManPTeam.setText(previousteam);
+			    txtManAmount.setEnabled(true);
+			    txtManAmount.setText(amount);
+			    if(!txtManName.getText().equals("")) {
+			    	objectId = (Object) manager.get("_id");
+			    }
+
+			}
+
+			mongoClient.close();
+			
+		}
 	}
 	
-	public void mongoDatabaseUpdatePres() throws Exception {
+	public void mongoDatabaseUpdate() throws Exception {
+		if(tabbedPane.getSelectedIndex() == 3) {
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("presidents");
+			
+			BasicDBObject updateFields = new BasicDBObject();
+			updateFields.append("name", txtPresName.getText());
+			updateFields.append("surname", txtPresSurname.getText());
+			updateFields.append("dateofbirth", txtPresDoB.getText());
+			updateFields.append("team", txtPresTeam.getText());
+			BasicDBObject setQuery = new BasicDBObject();
+			setQuery.append("$set", updateFields);
+			BasicDBObject searchQuery = new BasicDBObject().append("_id", objectId);
+			collection.update(searchQuery, setQuery);
+			mongoClient.close();
+		}
 		
-		MongoClient mongoClient = new MongoClient();
-		DB database = mongoClient.getDB("tmar");
-		DBCollection collection = database.getCollection("presidents");
-		
-		BasicDBObject updateFields = new BasicDBObject();
-		updateFields.append("name", txtPresName.getText());
-		updateFields.append("surname", txtPresSurname.getText());
-		updateFields.append("dateofbirth", txtPresDoB.getText());
-		updateFields.append("team", txtPresTeam.getText());
-		BasicDBObject setQuery = new BasicDBObject();
-		setQuery.append("$set", updateFields);
-		BasicDBObject searchQuery = new BasicDBObject().append("_id", objectId);
-		collection.update(searchQuery, setQuery);
-		
-		
-		mongoClient.close();
+		else if(tabbedPane.getSelectedIndex() == 2) {
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("managers");
+			
+			BasicDBObject updateFields = new BasicDBObject();
+			updateFields.append("name", txtManName.getText());
+			updateFields.append("surname", txtManSurname.getText());
+			updateFields.append("dateofbirth", txtManDoB.getText());
+			updateFields.append("currentteam", txtManCTeam.getText());
+			updateFields.append("previousteam", txtManPTeam.getText());
+			updateFields.append("transferfee", getSelectedButtonText(feeMButtons));
+			updateFields.append("amount", txtManAmount.getText());
+			BasicDBObject setQuery = new BasicDBObject();
+			setQuery.append("$set", updateFields);
+			System.out.println(objectId);
+			BasicDBObject searchQuery = new BasicDBObject().append("_id", objectId);
+			collection.update(searchQuery, setQuery);
+			
+			mongoClient.close();
+		}
+			
 	}
 	
 	
@@ -254,10 +332,9 @@ public class main {
 		
 		feeMButtons = new ButtonGroup();
 		
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.setBounds(0, 0, 778, 498);
 		frame.getContentPane().add(tabbedPane);
-		
 		JPanel pTeam = new JPanel();
 		tabbedPane.addTab("Team", null, pTeam, null);
 		pTeam.setLayout(null);
@@ -274,12 +351,12 @@ public class main {
 		
 		JLabel lblCity = new JLabel("City :");
 		lblCity.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblCity.setBounds(73, 173, 67, 19);
+		lblCity.setBounds(52, 173, 67, 19);
 		pTeam.add(lblCity);
 		
 		JLabel lblStadium = new JLabel("Stadium :");
 		lblStadium.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblStadium.setBounds(73, 221, 82, 19);
+		lblStadium.setBounds(52, 221, 82, 19);
 		pTeam.add(lblStadium);
 		
 		JLabel lblFormationDate = new JLabel("Formation Date :");
@@ -289,12 +366,12 @@ public class main {
 		
 		JLabel lblPresident = new JLabel("President :");
 		lblPresident.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPresident.setBounds(73, 132, 97, 19);
+		lblPresident.setBounds(52, 132, 97, 19);
 		pTeam.add(lblPresident);
 		
 		JLabel lblChampionshipYears = new JLabel("Championship Years : ");
 		lblChampionshipYears.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblChampionshipYears.setBounds(74, 270, 171, 19);
+		lblChampionshipYears.setBounds(53, 270, 171, 19);
 		pTeam.add(lblChampionshipYears);
 		
 		JLabel lblLeague = new JLabel("League :");
@@ -304,7 +381,7 @@ public class main {
 		
 		JLabel lblCups = new JLabel("Cups :");
 		lblCups.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblCups.setBounds(73, 329, 82, 19);
+		lblCups.setBounds(52, 329, 82, 19);
 		pTeam.add(lblCups);
 		
 		JLabel lblLastMatch = new JLabel("Last Match :");
@@ -321,7 +398,7 @@ public class main {
 		btnTSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					mongoDatabaseaddTeam();
+					mongoDatabaseadd();
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -352,31 +429,31 @@ public class main {
 		txtTPres = new JTextField();
 		lblPresident.setLabelFor(txtTPres);
 		txtTPres.setColumns(10);
-		txtTPres.setBounds(176, 134, 163, 19);
+		txtTPres.setBounds(155, 134, 163, 19);
 		pTeam.add(txtTPres);
 		
 		txtTCity = new JTextField();
 		lblCity.setLabelFor(txtTCity);
 		txtTCity.setColumns(10);
-		txtTCity.setBounds(176, 175, 163, 19);
+		txtTCity.setBounds(155, 175, 163, 19);
 		pTeam.add(txtTCity);
 		
 		txtTStadium = new JTextField();
 		lblStadium.setLabelFor(txtTStadium);
 		txtTStadium.setColumns(10);
-		txtTStadium.setBounds(176, 223, 163, 19);
+		txtTStadium.setBounds(155, 223, 163, 19);
 		pTeam.add(txtTStadium);
 		
 		txtTChampYears = new JTextField();
 		lblChampionshipYears.setLabelFor(txtTChampYears);
 		txtTChampYears.setColumns(10);
-		txtTChampYears.setBounds(253, 272, 163, 19);
+		txtTChampYears.setBounds(232, 272, 163, 19);
 		pTeam.add(txtTChampYears);
 		
 		txtTCups = new JTextField();
 		lblCups.setLabelFor(txtTCups);
 		txtTCups.setColumns(10);
-		txtTCups.setBounds(176, 331, 163, 19);
+		txtTCups.setBounds(155, 331, 163, 19);
 		pTeam.add(txtTCups);
 		
 		txtTColors = new JTextField();
@@ -408,111 +485,145 @@ public class main {
 		ftxtTFormDate.setBounds(594, 175, 120, 19);
 		pTeam.add(ftxtTFormDate);
 		
+		JCheckBox chckboxTFind = new JCheckBox("Find");
+		chckboxTFind.setFont(new Font("Tahoma", Font.BOLD, 12));
+		chckboxTFind.setBounds(52, 17, 60, 21);
+		pTeam.add(chckboxTFind);
+		
+		JLabel lblTFind = new JLabel("Name :");
+		lblTFind.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblTFind.setEnabled(false);
+		lblTFind.setBounds(250, 31, 66, 35);
+		pTeam.add(lblTFind);
+		
+		txtTFind = new JTextField();
+		txtTFind.setEnabled(false);
+		txtTFind.setColumns(10);
+		txtTFind.setBounds(335, 41, 195, 19);
+		pTeam.add(txtTFind);
+		
+		JButton btnTFind = new JButton("Find");
+		btnTFind.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		btnTFind.setEnabled(false);
+		btnTFind.setBounds(540, 40, 66, 19);
+		pTeam.add(btnTFind);
+		
+		JButton btnTeamUpdate = new JButton("Update");
+		btnTeamUpdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnTeamUpdate.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnTeamUpdate.setEnabled(false);
+		btnTeamUpdate.setBounds(523, 387, 117, 35);
+		pTeam.add(btnTeamUpdate);
+		
 		JPanel pPlayer = new JPanel();
 		tabbedPane.addTab("Player", null, pPlayer, null);
 		pPlayer.setLayout(null);
 		
 		JLabel lblPName = new JLabel("Name :");
 		lblPName.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPName.setBounds(29, 96, 57, 13);
+		lblPName.setBounds(40, 75, 57, 13);
 		pPlayer.add(lblPName);
 		
 		JLabel lblPSurname = new JLabel("Surname :");
 		lblPSurname.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPSurname.setBounds(29, 129, 90, 13);
+		lblPSurname.setBounds(40, 108, 90, 13);
 		pPlayer.add(lblPSurname);
 		
 		JLabel lblPDateOfBirth = new JLabel("Date of Birth :");
 		lblPDateOfBirth.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPDateOfBirth.setBounds(29, 171, 114, 13);
+		lblPDateOfBirth.setBounds(40, 150, 114, 13);
 		pPlayer.add(lblPDateOfBirth);
 		
 		JLabel lblPCurrTeam = new JLabel("Current Team :");
 		lblPCurrTeam.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPCurrTeam.setBounds(29, 205, 114, 13);
+		lblPCurrTeam.setBounds(40, 184, 114, 13);
 		pPlayer.add(lblPCurrTeam);
 		
 		JLabel lblPPrevTeams = new JLabel("Previous Teams :");
 		lblPPrevTeams.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPPrevTeams.setBounds(29, 244, 136, 13);
+		lblPPrevTeams.setBounds(40, 223, 136, 13);
 		pPlayer.add(lblPPrevTeams);
 		
 		JLabel lblPStatus = new JLabel("Status :");
 		lblPStatus.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPStatus.setBounds(408, 94, 77, 13);
+		lblPStatus.setBounds(419, 73, 77, 13);
 		pPlayer.add(lblPStatus);
 		
 		JLabel lblPRealteam = new JLabel("Real Team :");
 		lblPRealteam.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPRealteam.setBounds(408, 135, 90, 13);
+		lblPRealteam.setBounds(419, 114, 90, 13);
 		pPlayer.add(lblPRealteam);
 		
 		JLabel lblPDomFoot = new JLabel("Dominant Foot :");
 		lblPDomFoot.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPDomFoot.setBounds(408, 169, 124, 13);
+		lblPDomFoot.setBounds(419, 148, 124, 13);
 		pPlayer.add(lblPDomFoot);
 		
 		JLabel lblPTransFee = new JLabel("Transfer Fee :");
 		lblPTransFee.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPTransFee.setBounds(408, 207, 120, 13);
+		lblPTransFee.setBounds(419, 186, 120, 13);
 		pPlayer.add(lblPTransFee);
 		
 		JLabel lblPInjuries = new JLabel("Injuries :");
 		lblPInjuries.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPInjuries.setBounds(408, 288, 77, 13);
+		lblPInjuries.setBounds(40, 252, 77, 13);
 		pPlayer.add(lblPInjuries);
 		
 		txtPName = new JTextField();
-		txtPName.setBounds(171, 95, 154, 19);
+		txtPName.setBounds(182, 74, 154, 19);
 		pPlayer.add(txtPName);
 		txtPName.setColumns(10);
 		
 		txtPSurname = new JTextField();
 		txtPSurname.setColumns(10);
-		txtPSurname.setBounds(171, 128, 154, 19);
+		txtPSurname.setBounds(182, 107, 154, 19);
 		pPlayer.add(txtPSurname);
 		
 		txtPCurrentTeam = new JTextField();
 		txtPCurrentTeam.setColumns(10);
-		txtPCurrentTeam.setBounds(171, 204, 154, 19);
+		txtPCurrentTeam.setBounds(182, 183, 154, 19);
 		pPlayer.add(txtPCurrentTeam);
 		
 		txtPPrevTeams = new JTextField();
 		txtPPrevTeams.setColumns(10);
-		txtPPrevTeams.setBounds(171, 243, 154, 19);
+		txtPPrevTeams.setBounds(182, 222, 154, 19);
 		pPlayer.add(txtPPrevTeams);
 		
 		txtPRealTeam = new JTextField();
 		txtPRealTeam.setColumns(10);
-		txtPRealTeam.setBounds(538, 128, 173, 19);
+		txtPRealTeam.setBounds(549, 107, 173, 19);
 		pPlayer.add(txtPRealTeam);
 		txtPRealTeam.setEnabled(false);
 		
 		JLabel lblAmount_1 = new JLabel("Amount (\u20AC) :");
 		lblAmount_1.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblAmount_1.setBounds(408, 244, 99, 13);
+		lblAmount_1.setBounds(419, 223, 99, 13);
 		pPlayer.add(lblAmount_1);
 		
 		txtPAmount = new JTextField();
 		txtPAmount.setColumns(10);
-		txtPAmount.setBounds(538, 243, 173, 19);
+		txtPAmount.setBounds(549, 222, 173, 19);
 		pPlayer.add(txtPAmount);
 		txtPAmount.setEnabled(false);
 		
 		txtaPInjuries = new JTextArea();
-		txtaPInjuries.setBounds(538, 290, 173, 103);
+		txtaPInjuries.setLineWrap(true);
+		txtaPInjuries.setBounds(170, 254, 173, 103);
 		pPlayer.add(txtaPInjuries);
 		
 		
 		JRadioButton rdbtnBought = new JRadioButton("Bought");
 		rdbtnBought.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		rdbtnBought.setSelected(true);
-		rdbtnBought.setBounds(538, 93, 63, 21);
+		rdbtnBought.setBounds(549, 72, 63, 21);
 		pPlayer.add(rdbtnBought);
 		
 		JRadioButton rdbtnRented = new JRadioButton("Rented");
 		rdbtnRented.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		rdbtnRented.setBounds(637, 94, 74, 21);
+		rdbtnRented.setBounds(648, 73, 74, 21);
 		pPlayer.add(rdbtnRented);
 		bgrentorbought.add(rdbtnRented);
 		bgrentorbought.add(rdbtnBought);
@@ -538,17 +649,17 @@ public class main {
 		JRadioButton rdbtnLeft = new JRadioButton("Left");
 		rdbtnLeft.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		rdbtnLeft.setSelected(true);
-		rdbtnLeft.setBounds(538, 169, 47, 21);
+		rdbtnLeft.setBounds(549, 148, 47, 21);
 		pPlayer.add(rdbtnLeft);
 		
 		JRadioButton rdbtnRight = new JRadioButton("Right");
 		rdbtnRight.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		rdbtnRight.setBounds(587, 169, 63, 21);
+		rdbtnRight.setBounds(598, 148, 63, 21);
 		pPlayer.add(rdbtnRight);
 		
 		JRadioButton rdbtnBoth = new JRadioButton("Both");
 		rdbtnBoth.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		rdbtnBoth.setBounds(652, 169, 63, 21);
+		rdbtnBoth.setBounds(663, 148, 63, 21);
 		pPlayer.add(rdbtnBoth);
 		bgleftrightboth.add(rdbtnLeft);
 		bgleftrightboth.add(rdbtnRight);
@@ -557,12 +668,12 @@ public class main {
 		JRadioButton rdbtnInHand_1 = new JRadioButton("In Hand");
 		rdbtnInHand_1.setSelected(true);
 		rdbtnInHand_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		rdbtnInHand_1.setBounds(538, 203, 74, 21);
+		rdbtnInHand_1.setBounds(549, 182, 74, 21);
 		pPlayer.add(rdbtnInHand_1);
 		
 		JRadioButton rdbtnNotInHand_1 = new JRadioButton("Not In Hand");
 		rdbtnNotInHand_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		rdbtnNotInHand_1.setBounds(614, 203, 97, 21);
+		rdbtnNotInHand_1.setBounds(625, 182, 97, 21);
 		pPlayer.add(rdbtnNotInHand_1);
 		bginhandornot.add(rdbtnInHand_1);
 		bginhandornot.add(rdbtnNotInHand_1);
@@ -589,43 +700,43 @@ public class main {
 		tabbedPane.addTab("Manager", null, pManager, null);
 		pManager.setLayout(null);
 		
-		JLabel lblName = new JLabel("Name :");
-		lblName.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblName.setBounds(229, 112, 75, 26);
-		pManager.add(lblName);
+		JLabel lblManName = new JLabel("Name :");
+		lblManName.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblManName.setBounds(229, 112, 75, 26);
+		pManager.add(lblManName);
 		
-		JLabel lblSurname = new JLabel("Surname :");
-		lblSurname.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblSurname.setBounds(229, 148, 92, 26);
-		pManager.add(lblSurname);
+		JLabel lblManSurname = new JLabel("Surname :");
+		lblManSurname.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblManSurname.setBounds(229, 148, 92, 26);
+		pManager.add(lblManSurname);
 		
-		JLabel lblDateOfBirth = new JLabel("Date of Birth :");
-		lblDateOfBirth.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblDateOfBirth.setBounds(229, 184, 114, 26);
-		pManager.add(lblDateOfBirth);
+		JLabel lblManDoB = new JLabel("Date of Birth :");
+		lblManDoB.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblManDoB.setBounds(229, 184, 114, 26);
+		pManager.add(lblManDoB);
 		
-		JLabel lblCurrentTeam = new JLabel("Current Team :");
-		lblCurrentTeam.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblCurrentTeam.setBounds(229, 220, 114, 26);
-		pManager.add(lblCurrentTeam);
+		JLabel lblManCTeam = new JLabel("Current Team :");
+		lblManCTeam.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblManCTeam.setBounds(229, 220, 114, 26);
+		pManager.add(lblManCTeam);
 		
-		JLabel lblPreviousTeams = new JLabel("Previous Teams : ");
-		lblPreviousTeams.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblPreviousTeams.setBounds(229, 256, 135, 26);
-		pManager.add(lblPreviousTeams);
+		JLabel lblManPTeams = new JLabel("Previous Teams : ");
+		lblManPTeams.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblManPTeams.setBounds(229, 256, 135, 26);
+		pManager.add(lblManPTeams);
 		
-		JLabel lblTransferFee = new JLabel("Transfer Fee : ");
-		lblTransferFee.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblTransferFee.setBounds(229, 292, 135, 26);
-		pManager.add(lblTransferFee);
+		JLabel lblManTransferFee = new JLabel("Transfer Fee : ");
+		lblManTransferFee.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblManTransferFee.setBounds(229, 292, 135, 26);
+		pManager.add(lblManTransferFee);
 		
-		JRadioButton rdbtnInHand = new JRadioButton("In Hand");
+		rdbtnInHand = new JRadioButton("In Hand");
 		rdbtnInHand.setSelected(true);
 		rdbtnInHand.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		rdbtnInHand.setBounds(408, 297, 75, 21);
 		pManager.add(rdbtnInHand);
 		
-		JRadioButton rdbtnNotInHand = new JRadioButton("Not In Hand");
+		rdbtnNotInHand = new JRadioButton("Not In Hand");
 		rdbtnNotInHand.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		rdbtnNotInHand.setBounds(498, 296, 105, 21);
 		pManager.add(rdbtnNotInHand);
@@ -652,16 +763,16 @@ public class main {
 			}
 		});
 		
-		JLabel lblAmount = new JLabel("Amount (\u20AC) : ");
-		lblAmount.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblAmount.setBounds(229, 328, 135, 26);
-		pManager.add(lblAmount);
+		JLabel lblManAmount = new JLabel("Amount (\u20AC) : ");
+		lblManAmount.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblManAmount.setBounds(229, 328, 135, 26);
+		pManager.add(lblManAmount);
 		
 		JButton btnManSubmit = new JButton("Submit");
 		btnManSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					mongoDatabaseaddManager();
+					mongoDatabaseadd();
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -680,7 +791,7 @@ public class main {
 		btnPSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					mongoDatabaseaddPlayer();
+					mongoDatabaseadd();
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -704,8 +815,37 @@ public class main {
 		
 		txtfPDoB = new JFormattedTextField(format);
 		lblPDateOfBirth.setLabelFor(txtfPDoB);
-		txtfPDoB.setBounds(171, 170, 154, 19);
+		txtfPDoB.setBounds(182, 149, 154, 19);
 		pPlayer.add(txtfPDoB);
+		
+		JCheckBox chckboxPFind = new JCheckBox("Find");
+		chckboxPFind.setFont(new Font("Tahoma", Font.BOLD, 12));
+		chckboxPFind.setBounds(27, 6, 60, 21);
+		pPlayer.add(chckboxPFind);
+		
+		JLabel lblPFind = new JLabel("Name :");
+		lblPFind.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblPFind.setEnabled(false);
+		lblPFind.setBounds(225, 20, 66, 35);
+		pPlayer.add(lblPFind);
+		
+		txtPFind = new JTextField();
+		txtPFind.setEnabled(false);
+		txtPFind.setColumns(10);
+		txtPFind.setBounds(310, 30, 195, 19);
+		pPlayer.add(txtPFind);
+		
+		JButton btnPFind = new JButton("Find");
+		btnPFind.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		btnPFind.setEnabled(false);
+		btnPFind.setBounds(515, 29, 66, 19);
+		pPlayer.add(btnPFind);
+		
+		JButton btnPUpdate = new JButton("Update");
+		btnPUpdate.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnPUpdate.setEnabled(false);
+		btnPUpdate.setBounds(523, 387, 117, 35);
+		pPlayer.add(btnPUpdate);
 		btnManSubmit.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnManSubmit.setBounds(323, 387, 117, 35);
 		pManager.add(btnManSubmit);
@@ -739,6 +879,114 @@ public class main {
 		txtManAmount.setBounds(408, 334, 195, 19);
 		pManager.add(txtManAmount);
 		txtManAmount.setEnabled(false);
+		
+		JLabel lblManFind = new JLabel("Name :");
+		lblManFind.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblManFind.setEnabled(false);
+		lblManFind.setBounds(243, 42, 66, 35);
+		pManager.add(lblManFind);
+		
+
+		JButton btnManFind = new JButton("Find");
+		btnManFind.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					mongoDatabaseFind();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		btnManFind.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		btnManFind.setEnabled(false);
+		btnManFind.setBounds(533, 51, 66, 19);
+		pManager.add(btnManFind);
+		
+		JButton btnManUpdate = new JButton("Update");
+		btnManUpdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					mongoDatabaseUpdate();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		btnManUpdate.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnManUpdate.setEnabled(false);
+		btnManUpdate.setBounds(523, 387, 117, 35);
+		pManager.add(btnManUpdate);
+		
+		JCheckBox chckboxManFind = new JCheckBox("Find");
+		chckboxManFind.setFont(new Font("Tahoma", Font.BOLD, 12));
+		chckboxManFind.setBounds(45, 28, 60, 21);
+		pManager.add(chckboxManFind);
+		chckboxManFind.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(chckboxManFind.isSelected()) {
+					txtManName.setEnabled(false);
+					txtManName.setText("");
+					txtManSurname.setEnabled(false);
+					txtManSurname.setText("");
+					txtManCTeam.setEnabled(false);
+					txtManCTeam.setText("");
+					txtManPTeam.setEnabled(false);
+					txtManPTeam.setText("");
+					txtManDoB.setEnabled(false);
+					txtManDoB.setText("");
+					rdbtnInHand.setEnabled(false);
+					rdbtnNotInHand.setEnabled(false);
+					rdbtnInHand.setSelected(true);
+					txtManAmount.setEnabled(false);
+					txtManAmount.setText("");
+					txtManFindName.setEnabled(true);
+					lblManFind.setEnabled(true);
+					btnManFind.setEnabled(true);
+					btnManSubmit.setEnabled(false);
+					btnManUpdate.setEnabled(true);
+					lblManName.setEnabled(false);
+					lblManSurname.setEnabled(false);
+					lblManCTeam.setEnabled(false);
+					lblManPTeams.setEnabled(false);
+					lblManTransferFee.setEnabled(false);
+					lblManDoB.setEnabled(false);
+					lblManAmount.setEnabled(false);
+				}else {
+					txtManName.setEnabled(true);					
+					txtManSurname.setEnabled(true);					
+					txtManCTeam.setEnabled(true);					
+					txtManPTeam.setEnabled(true);					
+					txtManDoB.setEnabled(true);					
+					rdbtnInHand.setEnabled(true);
+					rdbtnNotInHand.setEnabled(true);
+					rdbtnInHand.setSelected(true);
+					txtManAmount.setEnabled(false);
+					txtManFindName.setEnabled(false);
+					txtManFindName.setText("");
+					lblManFind.setEnabled(false);
+					btnManFind.setEnabled(false);
+					btnManSubmit.setEnabled(true);
+					btnManUpdate.setEnabled(false);
+					lblManName.setEnabled(true);
+					lblManSurname.setEnabled(true);
+					lblManCTeam.setEnabled(true);
+					lblManPTeams.setEnabled(true);
+					lblManTransferFee.setEnabled(true);
+					lblManDoB.setEnabled(true);
+					lblManAmount.setEnabled(true);
+				}
+			}
+		});
+		
+		
+		txtManFindName = new JTextField();
+		txtManFindName.setEnabled(false);
+		txtManFindName.setColumns(10);
+		txtManFindName.setBounds(328, 52, 195, 19);
+		pManager.add(txtManFindName);
 		
 		JPanel pPres = new JPanel();
 		tabbedPane.addTab("President", null, pPres, null);
@@ -786,7 +1034,7 @@ public class main {
 		btnPresSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					mongoDatabaseaddPres();
+					mongoDatabaseadd();
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -822,7 +1070,7 @@ public class main {
 		btnPresUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					mongoDatabaseUpdatePres();
+					mongoDatabaseUpdate();
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -838,7 +1086,7 @@ public class main {
 		btnPresFind.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					mongoDatabaseFindPres();
+					mongoDatabaseFind();
 					
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
