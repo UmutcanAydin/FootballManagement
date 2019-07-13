@@ -41,8 +41,15 @@ public class main {
 	private JFormattedTextField ftxtTFormDate;
 	private JFormattedTextField txtManDoB;
 	private JFormattedTextField txtfPDoB;
-	JRadioButton rdbtnInHand;
-	JRadioButton rdbtnNotInHand;
+	private JRadioButton rdbtnInHand;
+	private JRadioButton rdbtnNotInHand;
+	private JRadioButton rdbtnInHand_1;
+	private JRadioButton rdbtnNotInHand_1;
+	private JRadioButton rdbtnBought;
+	private JRadioButton rdbtnRented;
+	private JRadioButton rdbtnLeft;
+	private JRadioButton rdbtnRight;
+	private JRadioButton rdbtnBoth;
 	private JTabbedPane tabbedPane;
 	private JTextField txtManName;
 	private JTextField txtManSurname;
@@ -198,7 +205,6 @@ public class main {
 			while(cursor.hasNext()) {
 				
 				DBObject president = cursor.next();
-			    System.out.println(president);
 			    
 			    String name = (String) president.get("name");
 			    String surname = (String) president.get("surname");
@@ -231,7 +237,6 @@ public class main {
 			while(cursor.hasNext()) {
 				
 				DBObject manager = cursor.next();
-			    System.out.println(manager);
 			    
 			    String name = (String) manager.get("name");
 			    String surname = (String) manager.get("surname");
@@ -267,7 +272,80 @@ public class main {
 
 			mongoClient.close();
 			
-		}else if(tabbedPane.getSelectedIndex() == 0) {
+		}else if(tabbedPane.getSelectedIndex() == 1) {
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("players");
+			
+			BasicDBObject whereQuery = new BasicDBObject();
+			whereQuery.put("name", txtPFind.getText());
+			DBCursor cursor = collection.find(whereQuery);
+			while(cursor.hasNext()) {
+				
+				DBObject player = cursor.next();
+			    
+			    String name = (String) player.get("name");
+			    String surname = (String) player.get("surname");
+			    String dateofbirth = (String) player.get("dateofbirth");
+			    String currentteam = (String) player.get("currentteam");
+			    String previousteam = (String) player.get("previousteam");
+			    String status = (String) player.get("status");
+			    String realteam = (String) player.get("realteam");
+			    String dominantfoot = (String) player.get("dominantfoot");
+			    String injuries = (String) player.get("injuries");
+			    String transferfee = (String) player.get("transferfee");
+			    String amount = (String) player.get("amount");			    
+			    rdbtnInHand_1.setEnabled(true);
+			    rdbtnNotInHand_1.setEnabled(true);
+			    if(transferfee.equals("In Hand")) {
+			    	rdbtnInHand_1.setSelected(true);
+			    }else if(transferfee.equals("Not In Hand")){
+			    	rdbtnNotInHand_1.setSelected(true);
+			    }
+			    rdbtnLeft.setEnabled(true);
+			    rdbtnRight.setEnabled(true);
+			    rdbtnBoth.setEnabled(true);
+			    if(dominantfoot.equals("Left")) {
+			    	rdbtnLeft.setSelected(true);
+			    }else if(dominantfoot.equals("Right")){
+			    	rdbtnRight.setSelected(true);
+			    }else if(dominantfoot.equals("Both")) {
+			    	rdbtnBoth.setSelected(true);
+			    }
+			    rdbtnBought.setEnabled(true);
+			    rdbtnRented.setEnabled(true);
+			    if(status.equals("Bought")) {
+			    	rdbtnBought.setSelected(true);
+			    }else if(status.equals("Rented")){
+			    	rdbtnRented.setSelected(true);
+			    }
+			    txtPName.setEnabled(true);
+			    txtPName.setText(name);
+			    txtPSurname.setEnabled(true);
+			    txtPSurname.setText(surname);
+			    txtfPDoB.setEnabled(true);
+			    txtfPDoB.setText(dateofbirth);
+			    txtPCurrentTeam.setEnabled(true);
+			    txtPCurrentTeam.setText(currentteam);
+			    txtPPrevTeams.setEnabled(true);
+			    txtPPrevTeams.setText(previousteam);
+			    txtPRealTeam.setEnabled(true);
+			    txtPRealTeam.setText(realteam);
+			    txtPAmount.setEnabled(true);
+			    txtPAmount.setText(amount);
+			    txtaPInjuries.setEnabled(true);
+			    txtaPInjuries.setText(injuries);
+			    if(!txtPName.getText().equals("")) {
+			    	objectId = (Object) player.get("_id");
+			    }
+
+			}
+
+			mongoClient.close();
+			
+		}
+		
+		else if(tabbedPane.getSelectedIndex() == 0) {
 			MongoClient mongoClient = new MongoClient();
 			DB database = mongoClient.getDB("tmar");
 			DBCollection collection = database.getCollection("teams");
@@ -278,7 +356,6 @@ public class main {
 			while(cursor.hasNext()) {
 				
 				DBObject team = cursor.next();
-			    System.out.println(team);
 			    
 			    String name = (String) team.get("name");
 			    String president = (String) team.get("president");
@@ -359,11 +436,35 @@ public class main {
 			updateFields.append("amount", txtManAmount.getText());
 			BasicDBObject setQuery = new BasicDBObject();
 			setQuery.append("$set", updateFields);
-			System.out.println(objectId);
 			BasicDBObject searchQuery = new BasicDBObject().append("_id", objectId);
 			collection.update(searchQuery, setQuery);
 			
 			mongoClient.close();
+		}
+		else if(tabbedPane.getSelectedIndex() == 1) {
+			MongoClient mongoClient = new MongoClient();
+			DB database = mongoClient.getDB("tmar");
+			DBCollection collection = database.getCollection("players");
+			
+			BasicDBObject updateFields = new BasicDBObject();
+			updateFields.append("name", txtPName.getText());
+			updateFields.append("surname", txtPSurname.getText());
+			updateFields.append("dateofbirth", txtfPDoB.getText());
+			updateFields.append("currentteam", txtPCurrentTeam.getText());
+			updateFields.append("previousteam", txtPPrevTeams.getText());
+			updateFields.append("status", getSelectedButtonText(bgrentorbought));
+			updateFields.append("realteam", txtPRealTeam.getText());
+			updateFields.append("dominantfoot", getSelectedButtonText(bgleftrightboth));
+			updateFields.append("transferfee", getSelectedButtonText(bginhandornot));
+			updateFields.append("amount", txtPAmount.getText());
+			updateFields.append("injuries", txtaPInjuries.getText());
+			BasicDBObject setQuery = new BasicDBObject();
+			setQuery.append("$set", updateFields);
+			BasicDBObject searchQuery = new BasicDBObject().append("_id", objectId);
+			collection.update(searchQuery, setQuery);
+			
+			mongoClient.close();
+			
 		}
 		else if(tabbedPane.getSelectedIndex() == 0) {
 			MongoClient mongoClient = new MongoClient();
@@ -798,13 +899,13 @@ public class main {
 		pPlayer.add(txtaPInjuries);
 		
 		
-		JRadioButton rdbtnBought = new JRadioButton("Bought");
+		rdbtnBought = new JRadioButton("Bought");
 		rdbtnBought.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		rdbtnBought.setSelected(true);
 		rdbtnBought.setBounds(549, 72, 63, 21);
 		pPlayer.add(rdbtnBought);
 		
-		JRadioButton rdbtnRented = new JRadioButton("Rented");
+		rdbtnRented = new JRadioButton("Rented");
 		rdbtnRented.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		rdbtnRented.setBounds(648, 73, 74, 21);
 		pPlayer.add(rdbtnRented);
@@ -829,18 +930,18 @@ public class main {
 			}
 		});
 		
-		JRadioButton rdbtnLeft = new JRadioButton("Left");
+		rdbtnLeft = new JRadioButton("Left");
 		rdbtnLeft.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		rdbtnLeft.setSelected(true);
 		rdbtnLeft.setBounds(549, 148, 47, 21);
 		pPlayer.add(rdbtnLeft);
 		
-		JRadioButton rdbtnRight = new JRadioButton("Right");
+		rdbtnRight = new JRadioButton("Right");
 		rdbtnRight.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		rdbtnRight.setBounds(598, 148, 63, 21);
 		pPlayer.add(rdbtnRight);
 		
-		JRadioButton rdbtnBoth = new JRadioButton("Both");
+		rdbtnBoth = new JRadioButton("Both");
 		rdbtnBoth.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		rdbtnBoth.setBounds(663, 148, 63, 21);
 		pPlayer.add(rdbtnBoth);
@@ -848,13 +949,13 @@ public class main {
 		bgleftrightboth.add(rdbtnRight);
 		bgleftrightboth.add(rdbtnBoth);
 		
-		JRadioButton rdbtnInHand_1 = new JRadioButton("In Hand");
+		rdbtnInHand_1 = new JRadioButton("In Hand");
 		rdbtnInHand_1.setSelected(true);
 		rdbtnInHand_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		rdbtnInHand_1.setBounds(549, 182, 74, 21);
 		pPlayer.add(rdbtnInHand_1);
 		
-		JRadioButton rdbtnNotInHand_1 = new JRadioButton("Not In Hand");
+		rdbtnNotInHand_1 = new JRadioButton("Not In Hand");
 		rdbtnNotInHand_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		rdbtnNotInHand_1.setBounds(625, 182, 97, 21);
 		pPlayer.add(rdbtnNotInHand_1);
@@ -1001,11 +1102,6 @@ public class main {
 		txtfPDoB.setBounds(182, 149, 154, 19);
 		pPlayer.add(txtfPDoB);
 		
-		JCheckBox chckboxPFind = new JCheckBox("Find");
-		chckboxPFind.setFont(new Font("Tahoma", Font.BOLD, 12));
-		chckboxPFind.setBounds(27, 6, 60, 21);
-		pPlayer.add(chckboxPFind);
-		
 		JLabel lblPFind = new JLabel("Name :");
 		lblPFind.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
 		lblPFind.setEnabled(false);
@@ -1019,12 +1115,32 @@ public class main {
 		pPlayer.add(txtPFind);
 		
 		JButton btnPFind = new JButton("Find");
+		btnPFind.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					mongoDatabaseFind();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 		btnPFind.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		btnPFind.setEnabled(false);
 		btnPFind.setBounds(515, 29, 66, 19);
 		pPlayer.add(btnPFind);
 		
 		JButton btnPUpdate = new JButton("Update");
+		btnPUpdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					mongoDatabaseUpdate();
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 		btnPUpdate.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnPUpdate.setEnabled(false);
 		btnPUpdate.setBounds(523, 387, 117, 35);
@@ -1032,6 +1148,98 @@ public class main {
 		btnManSubmit.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnManSubmit.setBounds(323, 387, 117, 35);
 		pManager.add(btnManSubmit);
+		
+		JCheckBox chckboxPFind = new JCheckBox("Find");
+		chckboxPFind.setFont(new Font("Tahoma", Font.BOLD, 12));
+		chckboxPFind.setBounds(27, 6, 60, 21);
+		pPlayer.add(chckboxPFind);
+		chckboxPFind.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(chckboxPFind.isSelected()) {
+					txtPName.setEnabled(false);
+					txtPName.setText("");
+					txtPSurname.setEnabled(false);
+					txtPSurname.setText("");
+					txtfPDoB.setEnabled(false);
+					txtfPDoB.setText("");
+					txtPCurrentTeam.setEnabled(false);
+					txtPCurrentTeam.setText("");
+					txtPPrevTeams.setEnabled(false);
+					txtPPrevTeams.setText("");
+					txtaPInjuries.setEnabled(false);
+					txtaPInjuries.setText("");
+					rdbtnBought.setEnabled(false);
+					rdbtnRented.setEnabled(false);
+					txtPRealTeam.setEnabled(false);
+					txtPRealTeam.setText("");
+					rdbtnLeft.setEnabled(false);
+					rdbtnRight.setEnabled(false);
+					rdbtnBoth.setEnabled(false);
+					rdbtnInHand_1.setEnabled(false);
+					rdbtnNotInHand_1.setEnabled(false);
+					txtPAmount.setEnabled(false);
+					lblPName.setEnabled(false);
+					lblPSurname.setEnabled(false);
+					lblPDateOfBirth.setEnabled(false);
+					lblPCurrTeam.setEnabled(false);
+					lblPPrevTeams.setEnabled(false);
+					lblPInjuries.setEnabled(false);
+					lblPStatus.setEnabled(false);
+					lblPRealteam.setEnabled(false);
+					lblPDomFoot.setEnabled(false);
+					lblPTransFee.setEnabled(false);
+					lblAmount_1.setEnabled(false);
+					btnPSubmit.setEnabled(false);
+					lblPFind.setEnabled(true);
+					txtPFind.setEnabled(true);
+					btnPFind.setEnabled(true);
+					btnPUpdate.setEnabled(true);
+				}else {
+					txtPName.setEnabled(true);
+					txtPName.setText("");
+					txtPSurname.setEnabled(true);
+					txtPSurname.setText("");
+					txtfPDoB.setEnabled(true);
+					txtfPDoB.setText("");
+					txtPCurrentTeam.setEnabled(true);
+					txtPCurrentTeam.setText("");
+					txtPPrevTeams.setEnabled(true);
+					txtPPrevTeams.setText("");
+					txtaPInjuries.setEnabled(true);
+					txtaPInjuries.setText("");
+					rdbtnBought.setEnabled(true);
+					rdbtnRented.setEnabled(true);
+					txtPRealTeam.setEnabled(true);
+					txtPRealTeam.setText("");
+					rdbtnLeft.setEnabled(true);
+					rdbtnRight.setEnabled(true);
+					rdbtnBoth.setEnabled(true);
+					rdbtnInHand_1.setEnabled(true);
+					rdbtnNotInHand_1.setEnabled(true);
+					txtPAmount.setEnabled(true);
+					lblPName.setEnabled(true);
+					lblPSurname.setEnabled(true);
+					lblPDateOfBirth.setEnabled(true);
+					lblPCurrTeam.setEnabled(true);
+					lblPPrevTeams.setEnabled(true);
+					lblPInjuries.setEnabled(true);
+					lblPStatus.setEnabled(true);
+					lblPRealteam.setEnabled(true);
+					lblPDomFoot.setEnabled(true);
+					lblPTransFee.setEnabled(true);
+					lblAmount_1.setEnabled(true);
+					btnPSubmit.setEnabled(true);
+					lblPFind.setEnabled(false);
+					txtPFind.setEnabled(false);
+					txtPFind.setText("");
+					btnPFind.setEnabled(false);
+					btnPUpdate.setEnabled(false);
+				}
+				
+			}
+		});
 		
 		txtManName = new JTextField();
 		txtManName.setColumns(10);
