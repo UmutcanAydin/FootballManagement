@@ -802,6 +802,17 @@ public class main {
 		txtTFind.setBounds(335, 41, 195, 19);
 		pTeam.add(txtTFind);
 		
+		JButton btnTShowPlayers = new JButton("Show Players");
+		btnTShowPlayers.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Players p = new Players();
+				p.setVisible(true);
+			}
+		});
+		btnTShowPlayers.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		btnTShowPlayers.setBounds(107, 387, 117, 35);
+		pTeam.add(btnTShowPlayers);
+		
 		JPanel pPlayer = new JPanel();
 		tabbedPane.addTab("Player", null, pPlayer, null);
 		pPlayer.setLayout(null);
