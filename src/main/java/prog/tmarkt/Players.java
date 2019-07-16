@@ -1,5 +1,6 @@
 package prog.tmarkt;
 
+import java.awt.Component;
 import java.awt.EventQueue;
 
 import javax.swing.JDialog;
@@ -7,11 +8,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumnModel;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 
 import javax.swing.JButton;
@@ -55,7 +59,22 @@ public class Players extends JDialog {
 		DBCursor cursor = collection.find(whereQuery,projectQuery);
 		while(cursor.hasNext()) {
 			
-			model.addRow(new Object[]{cursor.next().toString()});
+			DBObject player = cursor.next();
+		    
+		    String name = (String) player.get("name");
+		    String surname = (String) player.get("surname");
+		    String dateofbirth = (String) player.get("dateofbirth");
+		    String currentteam = (String) player.get("currentteam");
+		    String previousteam = (String) player.get("previousteam");
+		    String status = (String) player.get("status");
+		    String realteam = (String) player.get("realteam");
+		    String dominantfoot = (String) player.get("dominantfoot");
+		    String injuries = (String) player.get("injuries");
+		    String transferfee = (String) player.get("transferfee");
+		    String amount = (String) player.get("amount");
+		    
+			model.addRow(new Object[]{name,surname,dateofbirth,currentteam,previousteam,status,realteam,dominantfoot,transferfee,
+									  amount,injuries});
 		   
 		}	   
 	}
@@ -74,10 +93,19 @@ public class Players extends JDialog {
 		scrollPane.setBounds(0, 81, 750, 408);
 		getContentPane().add(scrollPane);
 		
-		table = new JTable(model = new DefaultTableModel(new Object[][]{},new Object[]{"Players"}));
+		table = new JTable();
+		table.setModel(model = new DefaultTableModel(
+			new Object[][] {
+			},
+			new Object[] {
+				"Name", "Surname", "DateofBirth", "CurrentTeam", "PreviousTeams", "Status", "RealTeam", "DominantFoot", "TransferFee", "Amount", "Injuries"
+			}
+		));
 		table.setRowSelectionAllowed(false);
 		table.setFillsViewportHeight(true);
 		scrollPane.setViewportView(table);
+		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF); 
+		
 				
 		txtTShowPlayersName = new JTextField();
 		txtTShowPlayersName.setBounds(247, 32, 223, 19);
@@ -101,10 +129,13 @@ public class Players extends JDialog {
 		btnTShowPlayerFind.setBounds(496, 32, 85, 21);
 		getContentPane().add(btnTShowPlayerFind);
 		
-		JLabel lblNewLabel = new JLabel("Name of the Team :");
+		JLabel lblNewLabel = new JLabel("Name of the Current Team :");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel.setBounds(75, 33, 150, 13);
+		lblNewLabel.setBounds(28, 33, 209, 13);
 		getContentPane().add(lblNewLabel);
+		
+		
 
 	}
+
 }
