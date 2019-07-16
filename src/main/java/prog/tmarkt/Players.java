@@ -23,6 +23,7 @@ import java.awt.Font;
 
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 
 public class Players extends JDialog {
@@ -93,7 +94,24 @@ public class Players extends JDialog {
 		scrollPane.setBounds(0, 81, 750, 408);
 		getContentPane().add(scrollPane);
 		
-		table = new JTable();
+		table = new JTable(){
+
+            //Implement table cell tool tips.           
+            public String getToolTipText(MouseEvent e) {
+                String tip = null;
+                java.awt.Point p = e.getPoint();
+                int rowIndex = rowAtPoint(p);
+                int colIndex = columnAtPoint(p);
+
+                try {
+                    tip = getValueAt(rowIndex, colIndex).toString();
+                } catch (RuntimeException e1) {
+                    //catch null pointer exception if mouse is over an empty line
+                }
+
+                return tip;
+            }
+        };
 		table.setModel(model = new DefaultTableModel(
 			new Object[][] {
 			},
@@ -104,7 +122,8 @@ public class Players extends JDialog {
 		table.setRowSelectionAllowed(false);
 		table.setFillsViewportHeight(true);
 		scrollPane.setViewportView(table);
-		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF); 
+		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+		
 		
 				
 		txtTShowPlayersName = new JTextField();
@@ -133,7 +152,6 @@ public class Players extends JDialog {
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblNewLabel.setBounds(28, 33, 209, 13);
 		getContentPane().add(lblNewLabel);
-		
 		
 
 	}
