@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
-import javax.naming.ldap.Rdn;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JTabbedPane;
@@ -14,13 +13,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Enumeration;
 
 import javax.swing.JTextField;
-import javax.swing.text.TabExpander;
 
-import com.mongodb.AggregationOutput;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -33,6 +29,13 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JCheckBox;
 
+/**
+ * Bu bir JavaDoc Örneğidir.
+ *
+ * @author Umutcan Aydin
+ * @version 1.0.0
+ * @since  2019-07-16
+ */
 public class main {
 
 	private JFrame frame;
@@ -45,8 +48,8 @@ public class main {
 	private JFormattedTextField txtfPDoB;
 	private JRadioButton rdbtnInHand;
 	private JRadioButton rdbtnNotInHand;
-	private JRadioButton rdbtnInHand_1;
-	private JRadioButton rdbtnNotInHand_1;
+	private JRadioButton rdbtnPInHand;
+	private JRadioButton rdbtnPNotInHand;
 	private JRadioButton rdbtnBought;
 	private JRadioButton rdbtnRented;
 	private JRadioButton rdbtnLeft;
@@ -110,6 +113,11 @@ public class main {
 		
 	}
 	
+	/**
+	 * Gets selected radio button's text from a buttongroup.
+	 * @param buttonGroup
+	 * @return
+	 */
 	public String getSelectedButtonText(ButtonGroup buttonGroup) {
         for (Enumeration<AbstractButton> buttons = buttonGroup.getElements(); buttons.hasMoreElements();) {
             AbstractButton button = buttons.nextElement();
@@ -122,6 +130,12 @@ public class main {
         return null;
     }
 
+	/**
+	 * Connects to MongoDB and
+	 * adds entries to the database
+	 *
+	 * @throws Exception
+	 */
 	public void mongoDatabaseadd() throws Exception {
 		if(tabbedPane.getSelectedIndex() == 3) {
 			DBObject president = new BasicDBObject()
@@ -193,8 +207,18 @@ public class main {
 		}
 	
 	}
-		
+	
+	/**
+	 * Gets the object from mongoDatabaseFind() function
+	 */
 	Object objectId;
+	
+	/**
+	 * Connects to MongoDB and
+	 * finds entries from the database.
+	 *
+	 * @throws Exception
+	 */
 	public void mongoDatabaseFind() throws Exception {
 		if(tabbedPane.getSelectedIndex() == 3) {
 			MongoClient mongoClient = new MongoClient();
@@ -204,24 +228,40 @@ public class main {
 			BasicDBObject whereQuery = new BasicDBObject();
 			whereQuery.put("name", txtPresFindName.getText());
 			DBCursor cursor = collection.find(whereQuery);
+			
 			while(cursor.hasNext()) {
 				
 				DBObject president = cursor.next();
-			    
-			    String name = (String) president.get("name");
-			    String surname = (String) president.get("surname");
+				    
+				String name = (String) president.get("name");
+				String surname = (String) president.get("surname");
 			    String dateofbirth = (String) president.get("dateofbirth");
 			    String team = (String) president.get("team");
 			    txtPresName.setEnabled(true);
-			    txtPresName.setText(name);
 			    txtPresSurname.setEnabled(true);
-			    txtPresSurname.setText(surname);
 			    txtPresDoB.setEnabled(true);
-			    txtPresDoB.setText(dateofbirth);
 			    txtPresTeam.setEnabled(true);
-			    txtPresTeam.setText(team);
-			    if(!txtPresName.getText().equals("")) {
-			    	objectId = (Object) president.get("_id");
+			    
+			    if(txtPresName.getText().equals(name)) {
+				   	MultiData md = new MultiData(txtPresName.getText());
+				   	md.setVisible(true);
+				    txtPresName.setText(md.getNamevalue());
+				    txtPresSurname.setText(md.getSurnamevalue());
+				    txtPresDoB.setText(md.getDobvalue());
+				    txtPresTeam.setText(md.getTeamvalue());
+					if(!txtPresName.getText().equals("")) {
+					    objectId = (Object) president.get("_id");
+					}
+			    	
+			    }else {
+				   txtPresName.setText(name);
+				   txtPresSurname.setText(surname);
+			       txtPresDoB.setText(dateofbirth);
+			       txtPresTeam.setText(team);
+				   if(!txtPresName.getText().equals("")) {
+				    	objectId = (Object) president.get("_id");
+				    }
+
 			    }
 
 			}
@@ -297,12 +337,12 @@ public class main {
 			    String injuries = (String) player.get("injuries");
 			    String transferfee = (String) player.get("transferfee");
 			    String amount = (String) player.get("amount");			    
-			    rdbtnInHand_1.setEnabled(true);
-			    rdbtnNotInHand_1.setEnabled(true);
+			    rdbtnPInHand.setEnabled(true);
+			    rdbtnPNotInHand.setEnabled(true);
 			    if(transferfee.equals("In Hand")) {
-			    	rdbtnInHand_1.setSelected(true);
+			    	rdbtnPInHand.setSelected(true);
 			    }else if(transferfee.equals("Not In Hand")){
-			    	rdbtnNotInHand_1.setSelected(true);
+			    	rdbtnPNotInHand.setSelected(true);
 			    }
 			    rdbtnLeft.setEnabled(true);
 			    rdbtnRight.setEnabled(true);
@@ -404,7 +444,19 @@ public class main {
 			
 		}
 	}
-	
+
+	public JTextField getTxtPresName() {
+		return txtPresName;
+	}
+
+	public void setTxtPresName(JTextField txtPresName) {
+		this.txtPresName = txtPresName;
+	}
+
+	/**
+	 * Updates selected entry to database.
+	 * @throws Exception
+	 */
 	public void mongoDatabaseUpdate() throws Exception {
 		if(tabbedPane.getSelectedIndex() == 3) {
 			MongoClient mongoClient = new MongoClient();
@@ -523,10 +575,10 @@ public class main {
 		tabbedPane.addTab("Team", null, pTeam, null);
 		pTeam.setLayout(null);
 		
-		JLabel lblName_1 = new JLabel("Name :");
-		lblName_1.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblName_1.setBounds(257, 95, 67, 19);
-		pTeam.add(lblName_1);
+		JLabel lblTName = new JLabel("Name :");
+		lblTName.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblTName.setBounds(257, 95, 67, 19);
+		pTeam.add(lblTName);
 		
 		JLabel lblColors = new JLabel("Colors :");
 		lblColors.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
@@ -577,8 +629,12 @@ public class main {
 		lblSrore.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
 		lblSrore.setBounds(455, 329, 67, 19);
 		pTeam.add(lblSrore);
-		
+				
 		JButton btnTSubmit = new JButton("Submit");
+		
+		/**
+		 * Calls mongoDatabaseadd() and adds entries to teams collection.
+		 */
 		btnTSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -605,7 +661,7 @@ public class main {
 		pTeam.add(btnTSubmit);
 		
 		txtTName = new JTextField();
-		lblName_1.setLabelFor(txtTName);
+		lblTName.setLabelFor(txtTName);
 		txtTName.setBounds(334, 97, 163, 19);
 		pTeam.add(txtTName);
 		txtTName.setColumns(10);
@@ -676,6 +732,10 @@ public class main {
 		pTeam.add(lblTFind);
 		
 		JButton btnTFind = new JButton("Find");
+		
+		/**
+		 * Calls mongoDatabaseFind(), gets query from the teams collection of the database.
+		 */
 		btnTFind.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -692,6 +752,10 @@ public class main {
 		pTeam.add(btnTFind);
 		
 		JButton btnTeamUpdate = new JButton("Update");
+		
+		/**
+		 * Calls mongoDatabaseUpdate(), updates query to teams collection of the database.
+		 */
 		btnTeamUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -710,7 +774,11 @@ public class main {
 		JCheckBox chckboxTFind = new JCheckBox("Find");
 		chckboxTFind.setFont(new Font("Tahoma", Font.BOLD, 12));
 		chckboxTFind.setBounds(52, 17, 60, 21);
-		pTeam.add(chckboxTFind);		
+		pTeam.add(chckboxTFind);
+		
+		/**
+		 * This checkbox activates Find capability for Teams.
+		 */
 		chckboxTFind.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -737,7 +805,7 @@ public class main {
 					txtTStadium.setText("");
 					ftxtTFormDate.setEnabled(false);
 					ftxtTFormDate.setText("");
-					lblName_1.setEnabled(false);
+					lblTName.setEnabled(false);
 					lblChampionshipYears.setEnabled(false);
 					lblCity.setEnabled(false);
 					lblColors.setEnabled(false);
@@ -776,7 +844,7 @@ public class main {
 					txtTStadium.setText("");
 					ftxtTFormDate.setEnabled(true);
 					ftxtTFormDate.setText("");
-					lblName_1.setEnabled(true);
+					lblTName.setEnabled(true);
 					lblChampionshipYears.setEnabled(true);
 					lblCity.setEnabled(true);
 					lblColors.setEnabled(true);
@@ -805,6 +873,11 @@ public class main {
 		pTeam.add(txtTFind);
 		
 		JButton btnTShowPlayers = new JButton("Show Players");
+		
+		/**
+		 * Opens a new JDialog which contains a textField, Button and JTable.
+		 * User enters a team name and button finds all the players on that team.
+		 */
 		btnTShowPlayers.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Players p = new Players();
@@ -895,10 +968,10 @@ public class main {
 		pPlayer.add(txtPRealTeam);
 		txtPRealTeam.setEnabled(false);
 		
-		JLabel lblAmount_1 = new JLabel("Amount (\u20AC) :");
-		lblAmount_1.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblAmount_1.setBounds(419, 223, 99, 13);
-		pPlayer.add(lblAmount_1);
+		JLabel lblPAmount = new JLabel("Amount (\u20AC) :");
+		lblPAmount.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblPAmount.setBounds(419, 223, 99, 13);
+		pPlayer.add(lblPAmount);
 		
 		txtPAmount = new JTextField();
 		txtPAmount.setColumns(10);
@@ -962,20 +1035,20 @@ public class main {
 		bgleftrightboth.add(rdbtnRight);
 		bgleftrightboth.add(rdbtnBoth);
 		
-		rdbtnInHand_1 = new JRadioButton("In Hand");
-		rdbtnInHand_1.setSelected(true);
-		rdbtnInHand_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		rdbtnInHand_1.setBounds(549, 182, 74, 21);
-		pPlayer.add(rdbtnInHand_1);
+		rdbtnPInHand = new JRadioButton("In Hand");
+		rdbtnPInHand.setSelected(true);
+		rdbtnPInHand.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		rdbtnPInHand.setBounds(549, 182, 74, 21);
+		pPlayer.add(rdbtnPInHand);
 		
-		rdbtnNotInHand_1 = new JRadioButton("Not In Hand");
-		rdbtnNotInHand_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		rdbtnNotInHand_1.setBounds(625, 182, 97, 21);
-		pPlayer.add(rdbtnNotInHand_1);
-		bginhandornot.add(rdbtnInHand_1);
-		bginhandornot.add(rdbtnNotInHand_1);
+		rdbtnPNotInHand = new JRadioButton("Not In Hand");
+		rdbtnPNotInHand.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		rdbtnPNotInHand.setBounds(625, 182, 97, 21);
+		pPlayer.add(rdbtnPNotInHand);
+		bginhandornot.add(rdbtnPInHand);
+		bginhandornot.add(rdbtnPNotInHand);
 		
-		rdbtnNotInHand_1.addActionListener(new ActionListener() {
+		rdbtnPNotInHand.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -984,7 +1057,7 @@ public class main {
 			}
 		});
 		
-		rdbtnInHand_1.addActionListener(new ActionListener() {
+		rdbtnPInHand.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -1065,6 +1138,9 @@ public class main {
 		lblManAmount.setBounds(229, 328, 135, 26);
 		pManager.add(lblManAmount);
 		
+		/**
+		 * Calls mongoDatabaseadd() and adds entries to managers collection.
+		 */
 		JButton btnManSubmit = new JButton("Submit");
 		btnManSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1084,6 +1160,10 @@ public class main {
 			}
 		});
 		
+		
+		/**
+		 * Calls mongoDatabaseadd() and adds entries to players collection.
+		 */
 		JButton btnPSubmit = new JButton("Submit");
 		btnPSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1103,7 +1183,7 @@ public class main {
 				txtaPInjuries.setText("");
 				rdbtnBought.setSelected(true);
 				rdbtnLeft.setSelected(true);
-				rdbtnInHand_1.setSelected(true);
+				rdbtnPInHand.setSelected(true);
 			}
 		});
 		btnPSubmit.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -1128,6 +1208,10 @@ public class main {
 		pPlayer.add(txtPFind);
 		
 		JButton btnPFind = new JButton("Find");
+		
+		/**
+		 * Calls mongoDatabaseFind(), gets query from the players collection of the database.
+		 */
 		btnPFind.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -1144,6 +1228,10 @@ public class main {
 		pPlayer.add(btnPFind);
 		
 		JButton btnPUpdate = new JButton("Update");
+		
+		/**
+		 * Calls mongoDatabaseUpdate(), updates query to players collection of the database.
+		 */
 		btnPUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -1166,8 +1254,11 @@ public class main {
 		chckboxPFind.setFont(new Font("Tahoma", Font.BOLD, 12));
 		chckboxPFind.setBounds(27, 6, 60, 21);
 		pPlayer.add(chckboxPFind);
-		chckboxPFind.addActionListener(new ActionListener() {
-			
+		
+		/**
+		 * This checkbox activates Find capability for Players.
+		 */
+		chckboxPFind.addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(chckboxPFind.isSelected()) {
@@ -1190,8 +1281,8 @@ public class main {
 					rdbtnLeft.setEnabled(false);
 					rdbtnRight.setEnabled(false);
 					rdbtnBoth.setEnabled(false);
-					rdbtnInHand_1.setEnabled(false);
-					rdbtnNotInHand_1.setEnabled(false);
+					rdbtnPInHand.setEnabled(false);
+					rdbtnPNotInHand.setEnabled(false);
 					txtPAmount.setEnabled(false);
 					lblPName.setEnabled(false);
 					lblPSurname.setEnabled(false);
@@ -1203,7 +1294,7 @@ public class main {
 					lblPRealteam.setEnabled(false);
 					lblPDomFoot.setEnabled(false);
 					lblPTransFee.setEnabled(false);
-					lblAmount_1.setEnabled(false);
+					lblPAmount.setEnabled(false);
 					btnPSubmit.setEnabled(false);
 					lblPFind.setEnabled(true);
 					txtPFind.setEnabled(true);
@@ -1229,8 +1320,8 @@ public class main {
 					rdbtnLeft.setEnabled(true);
 					rdbtnRight.setEnabled(true);
 					rdbtnBoth.setEnabled(true);
-					rdbtnInHand_1.setEnabled(true);
-					rdbtnNotInHand_1.setEnabled(true);
+					rdbtnPInHand.setEnabled(true);
+					rdbtnPNotInHand.setEnabled(true);
 					txtPAmount.setEnabled(true);
 					lblPName.setEnabled(true);
 					lblPSurname.setEnabled(true);
@@ -1242,7 +1333,7 @@ public class main {
 					lblPRealteam.setEnabled(true);
 					lblPDomFoot.setEnabled(true);
 					lblPTransFee.setEnabled(true);
-					lblAmount_1.setEnabled(true);
+					lblPAmount.setEnabled(true);
 					btnPSubmit.setEnabled(true);
 					lblPFind.setEnabled(false);
 					txtPFind.setEnabled(false);
@@ -1292,6 +1383,10 @@ public class main {
 		
 
 		JButton btnManFind = new JButton("Find");
+		
+		/**
+		 * Calls mongoDatabaseFind(), gets query from the managers collection of the database.
+		 */
 		btnManFind.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -1308,6 +1403,10 @@ public class main {
 		pManager.add(btnManFind);
 		
 		JButton btnManUpdate = new JButton("Update");
+		
+		/**
+		 * Calls mongoDatabaseUpdate(), updates query to managers collection of the database.
+		 */
 		btnManUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -1327,6 +1426,10 @@ public class main {
 		chckboxManFind.setFont(new Font("Tahoma", Font.BOLD, 12));
 		chckboxManFind.setBounds(45, 28, 60, 21);
 		pManager.add(chckboxManFind);
+		
+		/**
+		 * This checkbox activates Find capability for Managers.
+		 */
 		chckboxManFind.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -1434,6 +1537,9 @@ public class main {
 		txtPresTeam.setBounds(360, 302, 195, 19);
 		pPres.add(txtPresTeam);
 		
+		/**
+		 * Calls mongoDatabaseadd() and adds entries to presidents collection.
+		 */
 		JButton btnPresSubmit = new JButton("Submit");
 		btnPresSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1471,6 +1577,10 @@ public class main {
 		pPres.add(txtPresFindName);
 		
 		JButton btnPresUpdate = new JButton("Update");
+		
+		/**
+		 * Calls mongoDatabaseUpdate(), updates query to presidents collection of the database.
+		 */
 		btnPresUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -1487,6 +1597,10 @@ public class main {
 		pPres.add(btnPresUpdate);
 		
 		JButton btnPresFind = new JButton("Find");
+		
+		/**
+		 * Calls mongoDatabaseFind(), gets query from the presidents collection of the database.
+		 */
 		btnPresFind.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -1507,7 +1621,10 @@ public class main {
 		chckbxPresFind.setFont(new Font("Tahoma", Font.BOLD, 12));
 		chckbxPresFind.setBounds(45, 28, 60, 21);
 		pPres.add(chckbxPresFind);
-			
+		
+		/**
+		 * This checkbox activates Find capability for Presidents.
+		 */
 		chckbxPresFind.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

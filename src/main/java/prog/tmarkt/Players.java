@@ -1,6 +1,5 @@
 package prog.tmarkt;
 
-import java.awt.Component;
 import java.awt.EventQueue;
 
 import javax.swing.JDialog;
@@ -8,8 +7,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableColumnModel;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -95,7 +92,6 @@ public class Players extends JDialog {
 		getContentPane().add(scrollPane);
 		
 		table = new JTable(){
-
             //Implement table cell tool tips.           
             public String getToolTipText(MouseEvent e) {
                 String tip = null;
@@ -106,12 +102,15 @@ public class Players extends JDialog {
                 try {
                     tip = getValueAt(rowIndex, colIndex).toString();
                 } catch (RuntimeException e1) {
-                    //catch null pointer exception if mouse is over an empty line
+                	
                 }
 
                 return tip;
             }
         };
+        table.getTableHeader().setReorderingAllowed(false);
+		table.setFillsViewportHeight(true);
+		table.setRowSelectionAllowed(false);
 		table.setModel(model = new DefaultTableModel(
 			new Object[][] {
 			},
@@ -119,8 +118,6 @@ public class Players extends JDialog {
 				"Name", "Surname", "DateofBirth", "CurrentTeam", "PreviousTeams", "Status", "RealTeam", "DominantFoot", "TransferFee", "Amount", "Injuries"
 			}
 		));
-		table.setRowSelectionAllowed(false);
-		table.setFillsViewportHeight(true);
 		scrollPane.setViewportView(table);
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 		

@@ -1,0 +1,1388 @@
+src/main/java/prog/tmarkt/MultiData.java:9:	UnusedImports: Avoid unused imports such as 'org.apache.struts.tiles.taglib.GetTag'
+src/main/java/prog/tmarkt/MultiData.java:9:	UnusedImports: Avoid unused imports such as 'org.apache.struts.tiles.taglib.GetTag'
+src/main/java/prog/tmarkt/MultiData.java:28:	CommentRequired: Header comments are required
+src/main/java/prog/tmarkt/MultiData.java:28:	CommentRequired: Header comments are required
+src/main/java/prog/tmarkt/MultiData.java:28:	DataClass: The class 'MultiData' is suspected to be a Data Class (WOC=18.182%, NOPA=0, NOAM=8, WMC=13)
+src/main/java/prog/tmarkt/MultiData.java:28:	DataClass: The class 'MultiData' is suspected to be a Data Class (WOC=18.182%, NOPA=0, NOAM=8, WMC=13)
+src/main/java/prog/tmarkt/MultiData.java:28:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/prog/tmarkt/MultiData.java:28:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/prog/tmarkt/MultiData.java:30:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/MultiData.java:30:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/MultiData.java:30:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:30:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:31:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:31:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:32:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:32:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:33:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:33:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:34:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:34:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:35:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the mn field if you want a default access modifier
+src/main/java/prog/tmarkt/MultiData.java:35:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the mn field if you want a default access modifier
+src/main/java/prog/tmarkt/MultiData.java:35:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:35:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:35:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/prog/tmarkt/MultiData.java:35:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/prog/tmarkt/MultiData.java:35:	ShortVariable: Avoid variables with short names like mn
+src/main/java/prog/tmarkt/MultiData.java:35:	ShortVariable: Avoid variables with short names like mn
+src/main/java/prog/tmarkt/MultiData.java:36:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/MultiData.java:36:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/MultiData.java:36:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the model field if you want a default access modifier
+src/main/java/prog/tmarkt/MultiData.java:36:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the model field if you want a default access modifier
+src/main/java/prog/tmarkt/MultiData.java:36:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:36:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/MultiData.java:36:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/prog/tmarkt/MultiData.java:36:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/prog/tmarkt/MultiData.java:40:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:40:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:42:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:42:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:42:	LocalVariableCouldBeFinal: Local variable 'dialog' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:42:	LocalVariableCouldBeFinal: Local variable 'dialog' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:47:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/MultiData.java:47:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/MultiData.java:48:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/MultiData.java:48:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/MultiData.java:52:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/MultiData.java:52:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/MultiData.java:52:	MethodArgumentCouldBeFinal: Parameter 'txtPres' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:52:	MethodArgumentCouldBeFinal: Parameter 'txtPres' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:52:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/MultiData.java:52:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/MultiData.java:53:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:53:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:54:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:54:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:55:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:55:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:55:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:55:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:57:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:57:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:59:	LocalVariableCouldBeFinal: Local variable 'projectQuery' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:59:	LocalVariableCouldBeFinal: Local variable 'projectQuery' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:61:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/MultiData.java:61:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/MultiData.java:61:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:61:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:61:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:61:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:62:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:62:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:64:	LocalVariableCouldBeFinal: Local variable 'president' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:64:	LocalVariableCouldBeFinal: Local variable 'president' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:66:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:66:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:66:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:66:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:67:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:67:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:67:	LocalVariableCouldBeFinal: Local variable 'surname' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:67:	LocalVariableCouldBeFinal: Local variable 'surname' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:68:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:68:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:68:	LocalVariableCouldBeFinal: Local variable 'dateofbirth' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:68:	LocalVariableCouldBeFinal: Local variable 'dateofbirth' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:69:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:69:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/MultiData.java:69:	LocalVariableCouldBeFinal: Local variable 'team' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:69:	LocalVariableCouldBeFinal: Local variable 'team' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:71:	AvoidInstantiatingObjectsInLoops: Avoid instantiating new objects inside loops
+src/main/java/prog/tmarkt/MultiData.java:71:	AvoidInstantiatingObjectsInLoops: Avoid instantiating new objects inside loops
+src/main/java/prog/tmarkt/MultiData.java:81:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/prog/tmarkt/MultiData.java:81:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/prog/tmarkt/MultiData.java:81:	MethodArgumentCouldBeFinal: Parameter 'txtPresNameString' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:81:	MethodArgumentCouldBeFinal: Parameter 'txtPresNameString' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:81:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/MultiData.java:81:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/MultiData.java:92:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'table' (lines '92'-'152').
+src/main/java/prog/tmarkt/MultiData.java:92:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'table' (lines '92'-'152').
+src/main/java/prog/tmarkt/MultiData.java:92:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'table' (lines '92'-'152').
+src/main/java/prog/tmarkt/MultiData.java:92:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'table' (lines '92'-'152').
+src/main/java/prog/tmarkt/MultiData.java:92:	LocalVariableCouldBeFinal: Local variable 'table' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:92:	LocalVariableCouldBeFinal: Local variable 'table' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:94:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/MultiData.java:94:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/MultiData.java:94:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:94:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:94:	MissingOverride: The method 'getToolTipText(MouseEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/MultiData.java:94:	MissingOverride: The method 'getToolTipText(MouseEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/MultiData.java:94:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/MultiData.java:94:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/MultiData.java:95:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'tip' (lines '95'-'101').
+src/main/java/prog/tmarkt/MultiData.java:95:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'tip' (lines '95'-'101').
+src/main/java/prog/tmarkt/MultiData.java:95:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'tip' (lines '95'-'101').
+src/main/java/prog/tmarkt/MultiData.java:95:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'tip' (lines '95'-'101').
+src/main/java/prog/tmarkt/MultiData.java:96:	ShortVariable: Avoid variables with short names like p
+src/main/java/prog/tmarkt/MultiData.java:96:	ShortVariable: Avoid variables with short names like p
+src/main/java/prog/tmarkt/MultiData.java:101:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:101:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:102:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/MultiData.java:102:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/MultiData.java:102:	EmptyCatchBlock: Avoid empty catch blocks
+src/main/java/prog/tmarkt/MultiData.java:102:	EmptyCatchBlock: Avoid empty catch blocks
+src/main/java/prog/tmarkt/MultiData.java:121:	ConstructorCallsOverridableMethod: Overridable method 'mongoDatabaseFindPresidents' called during object construction
+src/main/java/prog/tmarkt/MultiData.java:121:	ConstructorCallsOverridableMethod: Overridable method 'mongoDatabaseFindPresidents' called during object construction
+src/main/java/prog/tmarkt/MultiData.java:123:	LocalVariableCouldBeFinal: Local variable 'scrollPane_1' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:123:	LocalVariableCouldBeFinal: Local variable 'scrollPane_1' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:123:	LocalVariableNamingConventions: The local variable name 'scrollPane_1' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/prog/tmarkt/MultiData.java:123:	LocalVariableNamingConventions: The local variable name 'scrollPane_1' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/prog/tmarkt/MultiData.java:123:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'scrollPane_1' is not final.
+src/main/java/prog/tmarkt/MultiData.java:123:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'scrollPane_1' is not final.
+src/main/java/prog/tmarkt/MultiData.java:127:	LocalVariableCouldBeFinal: Local variable 'btnSelect' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:127:	LocalVariableCouldBeFinal: Local variable 'btnSelect' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:129:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/MultiData.java:129:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/MultiData.java:129:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:129:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:129:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/MultiData.java:129:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/MultiData.java:129:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/MultiData.java:129:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/MultiData.java:133:	LocalVariableCouldBeFinal: Local variable 'row' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:133:	LocalVariableCouldBeFinal: Local variable 'row' could be declared final
+src/main/java/prog/tmarkt/MultiData.java:134:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:134:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:134:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:134:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:136:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:136:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:136:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:136:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:138:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:138:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:138:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:138:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:140:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:140:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:140:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:140:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/MultiData.java:158:	MethodArgumentCouldBeFinal: Parameter 'namevalue' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:158:	MethodArgumentCouldBeFinal: Parameter 'namevalue' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:166:	MethodArgumentCouldBeFinal: Parameter 'surnamevalue' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:166:	MethodArgumentCouldBeFinal: Parameter 'surnamevalue' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:174:	MethodArgumentCouldBeFinal: Parameter 'dobvalue' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:174:	MethodArgumentCouldBeFinal: Parameter 'dobvalue' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:182:	MethodArgumentCouldBeFinal: Parameter 'teamvalue' is not assigned and could be declared final
+src/main/java/prog/tmarkt/MultiData.java:182:	MethodArgumentCouldBeFinal: Parameter 'teamvalue' is not assigned and could be declared final
+src/main/java/prog/tmarkt/Players.java:26:	CommentRequired: Header comments are required
+src/main/java/prog/tmarkt/Players.java:26:	CommentRequired: Header comments are required
+src/main/java/prog/tmarkt/Players.java:26:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/prog/tmarkt/Players.java:26:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/prog/tmarkt/Players.java:27:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/Players.java:27:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/Players.java:27:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/Players.java:27:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/Players.java:27:	ImmutableField: Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/prog/tmarkt/Players.java:27:	ImmutableField: Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/prog/tmarkt/Players.java:28:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/Players.java:28:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/Players.java:28:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/Players.java:28:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/Players.java:28:	ImmutableField: Private field 'txtTShowPlayersName' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/prog/tmarkt/Players.java:28:	ImmutableField: Private field 'txtTShowPlayersName' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/prog/tmarkt/Players.java:28:	LongVariable: Avoid excessively long variable names like txtTShowPlayersName
+src/main/java/prog/tmarkt/Players.java:28:	LongVariable: Avoid excessively long variable names like txtTShowPlayersName
+src/main/java/prog/tmarkt/Players.java:29:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/Players.java:29:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/Players.java:29:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/Players.java:29:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/Players.java:29:	ImmutableField: Private field 'model' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/prog/tmarkt/Players.java:29:	ImmutableField: Private field 'model' could be made final; it is only initialized in the declaration or constructor.
+src/main/java/prog/tmarkt/Players.java:33:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/prog/tmarkt/Players.java:33:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/prog/tmarkt/Players.java:34:	DoNotUseThreads: To be compliant to J2EE, a webapp should not use any thread.
+src/main/java/prog/tmarkt/Players.java:34:	DoNotUseThreads: To be compliant to J2EE, a webapp should not use any thread.
+src/main/java/prog/tmarkt/Players.java:35:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/Players.java:35:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/Players.java:35:	MissingOverride: The method 'run()' is missing an @Override annotation.
+src/main/java/prog/tmarkt/Players.java:35:	MissingOverride: The method 'run()' is missing an @Override annotation.
+src/main/java/prog/tmarkt/Players.java:37:	LocalVariableCouldBeFinal: Local variable 'dialog' could be declared final
+src/main/java/prog/tmarkt/Players.java:37:	LocalVariableCouldBeFinal: Local variable 'dialog' could be declared final
+src/main/java/prog/tmarkt/Players.java:41:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/Players.java:41:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/Players.java:42:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/Players.java:42:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/Players.java:48:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/Players.java:48:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/Players.java:48:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/Players.java:48:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/Players.java:49:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/Players.java:49:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/Players.java:50:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/Players.java:50:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/Players.java:51:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:51:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:51:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/Players.java:51:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/Players.java:53:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/Players.java:53:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/Players.java:55:	LocalVariableCouldBeFinal: Local variable 'projectQuery' could be declared final
+src/main/java/prog/tmarkt/Players.java:55:	LocalVariableCouldBeFinal: Local variable 'projectQuery' could be declared final
+src/main/java/prog/tmarkt/Players.java:57:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/Players.java:57:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/Players.java:57:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:57:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:57:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/Players.java:57:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/Players.java:58:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:58:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:60:	LocalVariableCouldBeFinal: Local variable 'player' could be declared final
+src/main/java/prog/tmarkt/Players.java:60:	LocalVariableCouldBeFinal: Local variable 'player' could be declared final
+src/main/java/prog/tmarkt/Players.java:62:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:62:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:62:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/Players.java:62:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/Players.java:63:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:63:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:63:	LocalVariableCouldBeFinal: Local variable 'surname' could be declared final
+src/main/java/prog/tmarkt/Players.java:63:	LocalVariableCouldBeFinal: Local variable 'surname' could be declared final
+src/main/java/prog/tmarkt/Players.java:64:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:64:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:64:	LocalVariableCouldBeFinal: Local variable 'dateofbirth' could be declared final
+src/main/java/prog/tmarkt/Players.java:64:	LocalVariableCouldBeFinal: Local variable 'dateofbirth' could be declared final
+src/main/java/prog/tmarkt/Players.java:65:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:65:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:65:	LocalVariableCouldBeFinal: Local variable 'currentteam' could be declared final
+src/main/java/prog/tmarkt/Players.java:65:	LocalVariableCouldBeFinal: Local variable 'currentteam' could be declared final
+src/main/java/prog/tmarkt/Players.java:66:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:66:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:66:	LocalVariableCouldBeFinal: Local variable 'previousteam' could be declared final
+src/main/java/prog/tmarkt/Players.java:66:	LocalVariableCouldBeFinal: Local variable 'previousteam' could be declared final
+src/main/java/prog/tmarkt/Players.java:67:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:67:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:67:	LocalVariableCouldBeFinal: Local variable 'status' could be declared final
+src/main/java/prog/tmarkt/Players.java:67:	LocalVariableCouldBeFinal: Local variable 'status' could be declared final
+src/main/java/prog/tmarkt/Players.java:68:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:68:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:68:	LocalVariableCouldBeFinal: Local variable 'realteam' could be declared final
+src/main/java/prog/tmarkt/Players.java:68:	LocalVariableCouldBeFinal: Local variable 'realteam' could be declared final
+src/main/java/prog/tmarkt/Players.java:69:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:69:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:69:	LocalVariableCouldBeFinal: Local variable 'dominantfoot' could be declared final
+src/main/java/prog/tmarkt/Players.java:69:	LocalVariableCouldBeFinal: Local variable 'dominantfoot' could be declared final
+src/main/java/prog/tmarkt/Players.java:70:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:70:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:70:	LocalVariableCouldBeFinal: Local variable 'injuries' could be declared final
+src/main/java/prog/tmarkt/Players.java:70:	LocalVariableCouldBeFinal: Local variable 'injuries' could be declared final
+src/main/java/prog/tmarkt/Players.java:71:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:71:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:71:	LocalVariableCouldBeFinal: Local variable 'transferfee' could be declared final
+src/main/java/prog/tmarkt/Players.java:71:	LocalVariableCouldBeFinal: Local variable 'transferfee' could be declared final
+src/main/java/prog/tmarkt/Players.java:72:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:72:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:72:	LocalVariableCouldBeFinal: Local variable 'amount' could be declared final
+src/main/java/prog/tmarkt/Players.java:72:	LocalVariableCouldBeFinal: Local variable 'amount' could be declared final
+src/main/java/prog/tmarkt/Players.java:74:	AvoidInstantiatingObjectsInLoops: Avoid instantiating new objects inside loops
+src/main/java/prog/tmarkt/Players.java:74:	AvoidInstantiatingObjectsInLoops: Avoid instantiating new objects inside loops
+src/main/java/prog/tmarkt/Players.java:83:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/prog/tmarkt/Players.java:83:	CallSuperInConstructor: It is a good practice to call super() in a constructor
+src/main/java/prog/tmarkt/Players.java:90:	LocalVariableCouldBeFinal: Local variable 'scrollPane' could be declared final
+src/main/java/prog/tmarkt/Players.java:90:	LocalVariableCouldBeFinal: Local variable 'scrollPane' could be declared final
+src/main/java/prog/tmarkt/Players.java:96:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/Players.java:96:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/Players.java:96:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/Players.java:96:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/Players.java:96:	MissingOverride: The method 'getToolTipText(MouseEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/Players.java:96:	MissingOverride: The method 'getToolTipText(MouseEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/Players.java:96:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/Players.java:96:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/Players.java:97:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'tip' (lines '97'-'103').
+src/main/java/prog/tmarkt/Players.java:97:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'tip' (lines '97'-'103').
+src/main/java/prog/tmarkt/Players.java:97:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'tip' (lines '97'-'103').
+src/main/java/prog/tmarkt/Players.java:97:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'tip' (lines '97'-'103').
+src/main/java/prog/tmarkt/Players.java:98:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
+src/main/java/prog/tmarkt/Players.java:98:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
+src/main/java/prog/tmarkt/Players.java:98:	ShortVariable: Avoid variables with short names like p
+src/main/java/prog/tmarkt/Players.java:98:	ShortVariable: Avoid variables with short names like p
+src/main/java/prog/tmarkt/Players.java:99:	LocalVariableCouldBeFinal: Local variable 'rowIndex' could be declared final
+src/main/java/prog/tmarkt/Players.java:99:	LocalVariableCouldBeFinal: Local variable 'rowIndex' could be declared final
+src/main/java/prog/tmarkt/Players.java:100:	LocalVariableCouldBeFinal: Local variable 'colIndex' could be declared final
+src/main/java/prog/tmarkt/Players.java:100:	LocalVariableCouldBeFinal: Local variable 'colIndex' could be declared final
+src/main/java/prog/tmarkt/Players.java:103:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/Players.java:103:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/Players.java:104:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/Players.java:104:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/Players.java:104:	EmptyCatchBlock: Avoid empty catch blocks
+src/main/java/prog/tmarkt/Players.java:104:	EmptyCatchBlock: Avoid empty catch blocks
+src/main/java/prog/tmarkt/Players.java:131:	LocalVariableCouldBeFinal: Local variable 'btnTShowPlayerFind' could be declared final
+src/main/java/prog/tmarkt/Players.java:131:	LocalVariableCouldBeFinal: Local variable 'btnTShowPlayerFind' could be declared final
+src/main/java/prog/tmarkt/Players.java:131:	LongVariable: Avoid excessively long variable names like btnTShowPlayerFind
+src/main/java/prog/tmarkt/Players.java:131:	LongVariable: Avoid excessively long variable names like btnTShowPlayerFind
+src/main/java/prog/tmarkt/Players.java:133:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/Players.java:133:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/Players.java:133:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/Players.java:133:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/Players.java:133:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/Players.java:133:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/Players.java:133:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/Players.java:133:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/Players.java:135:	LocalVariableCouldBeFinal: Local variable 'tm' could be declared final
+src/main/java/prog/tmarkt/Players.java:135:	LocalVariableCouldBeFinal: Local variable 'tm' could be declared final
+src/main/java/prog/tmarkt/Players.java:135:	ShortVariable: Avoid variables with short names like tm
+src/main/java/prog/tmarkt/Players.java:135:	ShortVariable: Avoid variables with short names like tm
+src/main/java/prog/tmarkt/Players.java:136:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:136:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/Players.java:138:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/Players.java:138:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/Players.java:140:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/Players.java:140:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/Players.java:148:	LocalVariableCouldBeFinal: Local variable 'lblNewLabel' could be declared final
+src/main/java/prog/tmarkt/Players.java:148:	LocalVariableCouldBeFinal: Local variable 'lblNewLabel' could be declared final
+src/main/java/prog/tmarkt/main.java:39:	ClassNamingConventions: The class name 'main' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/prog/tmarkt/main.java:39:	ClassNamingConventions: The class name 'main' doesn't match '[A-Z][a-zA-Z0-9]*'
+src/main/java/prog/tmarkt/main.java:39:	ExcessiveClassLength: Avoid really long classes.
+src/main/java/prog/tmarkt/main.java:39:	ExcessiveClassLength: Avoid really long classes.
+src/main/java/prog/tmarkt/main.java:39:	ModifiedCyclomaticComplexity: The class 'main' has a Modified Cyclomatic Complexity of 9 (Highest = 40).
+src/main/java/prog/tmarkt/main.java:39:	ModifiedCyclomaticComplexity: The class 'main' has a Modified Cyclomatic Complexity of 9 (Highest = 40).
+src/main/java/prog/tmarkt/main.java:39:	ShortClassName: Avoid short class names like main
+src/main/java/prog/tmarkt/main.java:39:	ShortClassName: Avoid short class names like main
+src/main/java/prog/tmarkt/main.java:39:	StdCyclomaticComplexity: The class 'main' has a Standard Cyclomatic Complexity of 9 (Highest = 40).
+src/main/java/prog/tmarkt/main.java:39:	StdCyclomaticComplexity: The class 'main' has a Standard Cyclomatic Complexity of 9 (Highest = 40).
+src/main/java/prog/tmarkt/main.java:39:	TooManyFields: Too many fields
+src/main/java/prog/tmarkt/main.java:39:	TooManyFields: Too many fields
+src/main/java/prog/tmarkt/main.java:41:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:41:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:41:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:41:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:42:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:42:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:43:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:43:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:43:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:43:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:44:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:44:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:44:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:44:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:45:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:45:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:45:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:45:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:46:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:46:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:46:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:46:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:47:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:47:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:47:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:47:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:48:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:48:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:48:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:48:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:49:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:49:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:49:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:49:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:50:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:50:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:50:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:50:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:51:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:51:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:51:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:51:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:52:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:52:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:52:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:52:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:53:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:53:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:53:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:53:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:54:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:54:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:54:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:54:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:55:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:55:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:55:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:55:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:56:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:56:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:56:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:56:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:57:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:57:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:57:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:57:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:58:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:58:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:58:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:58:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:59:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:59:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:59:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:59:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:60:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:60:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:60:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:60:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:61:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:61:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:61:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:61:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:62:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:62:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:62:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:62:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:63:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:63:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:63:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:63:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:64:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:64:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:64:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:64:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:65:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:65:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:65:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:65:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:66:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:66:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:66:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:66:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:67:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:67:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:67:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:67:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:68:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:68:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:68:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:68:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:69:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:69:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:69:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:69:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:70:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:70:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:70:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:70:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:71:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:71:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:71:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:71:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:72:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:72:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:72:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:72:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:73:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:73:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:73:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:73:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:74:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:74:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:74:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:74:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:75:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:75:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:75:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:75:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:76:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:76:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:76:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:76:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:77:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:77:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:77:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:77:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:78:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:78:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:78:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:78:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:79:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:79:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:79:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:79:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:80:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:80:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:80:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:80:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:81:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:81:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:81:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:81:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:82:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:82:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:82:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:82:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:83:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:83:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:83:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:83:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:84:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:84:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:84:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:84:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:85:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:85:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:85:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:85:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:86:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:86:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:86:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:86:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:87:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:87:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:87:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:87:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:88:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:88:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:88:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:88:	CommentRequired: Field comments are required
+src/main/java/prog/tmarkt/main.java:93:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:93:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:93:	MethodWithSameNameAsEnclosingClass: Classes should not have non-constructor methods with the same name as the class
+src/main/java/prog/tmarkt/main.java:93:	MethodWithSameNameAsEnclosingClass: Classes should not have non-constructor methods with the same name as the class
+src/main/java/prog/tmarkt/main.java:94:	DoNotUseThreads: To be compliant to J2EE, a webapp should not use any thread.
+src/main/java/prog/tmarkt/main.java:94:	DoNotUseThreads: To be compliant to J2EE, a webapp should not use any thread.
+src/main/java/prog/tmarkt/main.java:95:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/main.java:95:	CommentRequired: Public method and constructor comments are required
+src/main/java/prog/tmarkt/main.java:95:	MissingOverride: The method 'run()' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:95:	MissingOverride: The method 'run()' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:97:	LocalVariableCouldBeFinal: Local variable 'window' could be declared final
+src/main/java/prog/tmarkt/main.java:97:	LocalVariableCouldBeFinal: Local variable 'window' could be declared final
+src/main/java/prog/tmarkt/main.java:100:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:100:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:101:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:101:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:121:	MethodArgumentCouldBeFinal: Parameter 'buttonGroup' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:121:	MethodArgumentCouldBeFinal: Parameter 'buttonGroup' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:122:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:122:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:122:	LocalVariableCouldBeFinal: Local variable 'buttons' could be declared final
+src/main/java/prog/tmarkt/main.java:122:	LocalVariableCouldBeFinal: Local variable 'buttons' could be declared final
+src/main/java/prog/tmarkt/main.java:123:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:123:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:123:	LocalVariableCouldBeFinal: Local variable 'button' could be declared final
+src/main/java/prog/tmarkt/main.java:123:	LocalVariableCouldBeFinal: Local variable 'button' could be declared final
+src/main/java/prog/tmarkt/main.java:125:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:125:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:126:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:126:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:126:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/prog/tmarkt/main.java:126:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/prog/tmarkt/main.java:139:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/main.java:139:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/main.java:140:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:140:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:141:	LocalVariableCouldBeFinal: Local variable 'president' could be declared final
+src/main/java/prog/tmarkt/main.java:141:	LocalVariableCouldBeFinal: Local variable 'president' could be declared final
+src/main/java/prog/tmarkt/main.java:142:	AvoidDuplicateLiterals: The String literal "name" appears 16 times in this file; the first occurrence is on line 142
+src/main/java/prog/tmarkt/main.java:142:	AvoidDuplicateLiterals: The String literal "name" appears 16 times in this file; the first occurrence is on line 142
+src/main/java/prog/tmarkt/main.java:143:	AvoidDuplicateLiterals: The String literal "surname" appears 9 times in this file; the first occurrence is on line 143
+src/main/java/prog/tmarkt/main.java:143:	AvoidDuplicateLiterals: The String literal "surname" appears 9 times in this file; the first occurrence is on line 143
+src/main/java/prog/tmarkt/main.java:144:	AvoidDuplicateLiterals: The String literal "dateofbirth" appears 9 times in this file; the first occurrence is on line 144
+src/main/java/prog/tmarkt/main.java:144:	AvoidDuplicateLiterals: The String literal "dateofbirth" appears 9 times in this file; the first occurrence is on line 144
+src/main/java/prog/tmarkt/main.java:147:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:147:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:148:	AvoidDuplicateLiterals: The String literal "tmar" appears 12 times in this file; the first occurrence is on line 148
+src/main/java/prog/tmarkt/main.java:148:	AvoidDuplicateLiterals: The String literal "tmar" appears 12 times in this file; the first occurrence is on line 148
+src/main/java/prog/tmarkt/main.java:148:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:148:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:149:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:149:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:149:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:149:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:150:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:150:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:153:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:153:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:154:	LocalVariableCouldBeFinal: Local variable 'manager' could be declared final
+src/main/java/prog/tmarkt/main.java:154:	LocalVariableCouldBeFinal: Local variable 'manager' could be declared final
+src/main/java/prog/tmarkt/main.java:158:	AvoidDuplicateLiterals: The String literal "currentteam" appears 6 times in this file; the first occurrence is on line 158
+src/main/java/prog/tmarkt/main.java:158:	AvoidDuplicateLiterals: The String literal "currentteam" appears 6 times in this file; the first occurrence is on line 158
+src/main/java/prog/tmarkt/main.java:159:	AvoidDuplicateLiterals: The String literal "previousteam" appears 6 times in this file; the first occurrence is on line 159
+src/main/java/prog/tmarkt/main.java:159:	AvoidDuplicateLiterals: The String literal "previousteam" appears 6 times in this file; the first occurrence is on line 159
+src/main/java/prog/tmarkt/main.java:160:	AvoidDuplicateLiterals: The String literal "transferfee" appears 6 times in this file; the first occurrence is on line 160
+src/main/java/prog/tmarkt/main.java:160:	AvoidDuplicateLiterals: The String literal "transferfee" appears 6 times in this file; the first occurrence is on line 160
+src/main/java/prog/tmarkt/main.java:161:	AvoidDuplicateLiterals: The String literal "amount" appears 6 times in this file; the first occurrence is on line 161
+src/main/java/prog/tmarkt/main.java:161:	AvoidDuplicateLiterals: The String literal "amount" appears 6 times in this file; the first occurrence is on line 161
+src/main/java/prog/tmarkt/main.java:162:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:162:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:163:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:163:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:164:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:164:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:164:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:164:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:165:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:165:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:168:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:168:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:169:	LocalVariableCouldBeFinal: Local variable 'player' could be declared final
+src/main/java/prog/tmarkt/main.java:169:	LocalVariableCouldBeFinal: Local variable 'player' could be declared final
+src/main/java/prog/tmarkt/main.java:181:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:181:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:182:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:182:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:183:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:183:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:183:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:183:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:184:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:184:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:190:	LocalVariableCouldBeFinal: Local variable 'team' could be declared final
+src/main/java/prog/tmarkt/main.java:190:	LocalVariableCouldBeFinal: Local variable 'team' could be declared final
+src/main/java/prog/tmarkt/main.java:202:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:202:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:203:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:203:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:204:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:204:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:204:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:204:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:205:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:205:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:214:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:214:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/prog/tmarkt/main.java:214:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the objectId field if you want a default access modifier
+src/main/java/prog/tmarkt/main.java:214:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the objectId field if you want a default access modifier
+src/main/java/prog/tmarkt/main.java:214:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/prog/tmarkt/main.java:214:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/prog/tmarkt/main.java:214:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/prog/tmarkt/main.java:214:	FieldDeclarationsShouldBeAtStartOfClass: Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
+src/main/java/prog/tmarkt/main.java:222:	CyclomaticComplexity: The method 'mongoDatabaseFind()' has a cyclomatic complexity of 24.
+src/main/java/prog/tmarkt/main.java:222:	CyclomaticComplexity: The method 'mongoDatabaseFind()' has a cyclomatic complexity of 24.
+src/main/java/prog/tmarkt/main.java:222:	ExcessiveMethodLength: Avoid really long methods.
+src/main/java/prog/tmarkt/main.java:222:	ExcessiveMethodLength: Avoid really long methods.
+src/main/java/prog/tmarkt/main.java:222:	ModifiedCyclomaticComplexity: The method 'mongoDatabaseFind' has a Modified Cyclomatic Complexity of 24.
+src/main/java/prog/tmarkt/main.java:222:	ModifiedCyclomaticComplexity: The method 'mongoDatabaseFind' has a Modified Cyclomatic Complexity of 24.
+src/main/java/prog/tmarkt/main.java:222:	NcssCount: The method 'mongoDatabaseFind()' has a NCSS line count of 187.
+src/main/java/prog/tmarkt/main.java:222:	NcssCount: The method 'mongoDatabaseFind()' has a NCSS line count of 187.
+src/main/java/prog/tmarkt/main.java:222:	NcssMethodCount: The method mongoDatabaseFind() has an NCSS line count of 185
+src/main/java/prog/tmarkt/main.java:222:	NcssMethodCount: The method mongoDatabaseFind() has an NCSS line count of 185
+src/main/java/prog/tmarkt/main.java:222:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/main.java:222:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/main.java:222:	StdCyclomaticComplexity: The method 'mongoDatabaseFind' has a Standard Cyclomatic Complexity of 24.
+src/main/java/prog/tmarkt/main.java:222:	StdCyclomaticComplexity: The method 'mongoDatabaseFind' has a Standard Cyclomatic Complexity of 24.
+src/main/java/prog/tmarkt/main.java:223:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:223:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:224:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:224:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:225:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:225:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:226:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:226:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:226:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:226:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:228:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:228:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:230:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/main.java:230:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/main.java:230:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:230:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:230:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/main.java:230:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/main.java:232:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:232:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:234:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:234:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:234:	LocalVariableCouldBeFinal: Local variable 'president' could be declared final
+src/main/java/prog/tmarkt/main.java:234:	LocalVariableCouldBeFinal: Local variable 'president' could be declared final
+src/main/java/prog/tmarkt/main.java:236:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:236:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:236:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/main.java:236:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/main.java:237:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'surname' (lines '237'-'237').
+src/main/java/prog/tmarkt/main.java:237:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'surname' (lines '237'-'237').
+src/main/java/prog/tmarkt/main.java:237:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'surname' (lines '237'-'446').
+src/main/java/prog/tmarkt/main.java:237:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'surname' (lines '237'-'446').
+src/main/java/prog/tmarkt/main.java:237:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:237:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:237:	LocalVariableCouldBeFinal: Local variable 'surname' could be declared final
+src/main/java/prog/tmarkt/main.java:237:	LocalVariableCouldBeFinal: Local variable 'surname' could be declared final
+src/main/java/prog/tmarkt/main.java:238:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'dateofbirth' (lines '238'-'238').
+src/main/java/prog/tmarkt/main.java:238:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'dateofbirth' (lines '238'-'238').
+src/main/java/prog/tmarkt/main.java:238:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'dateofbirth' (lines '238'-'446').
+src/main/java/prog/tmarkt/main.java:238:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'dateofbirth' (lines '238'-'446').
+src/main/java/prog/tmarkt/main.java:238:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:238:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:238:	LocalVariableCouldBeFinal: Local variable 'dateofbirth' could be declared final
+src/main/java/prog/tmarkt/main.java:238:	LocalVariableCouldBeFinal: Local variable 'dateofbirth' could be declared final
+src/main/java/prog/tmarkt/main.java:239:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'team' (lines '239'-'239').
+src/main/java/prog/tmarkt/main.java:239:	DataflowAnomalyAnalysis: Found 'DD'-anomaly for variable 'team' (lines '239'-'239').
+src/main/java/prog/tmarkt/main.java:239:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'team' (lines '239'-'446').
+src/main/java/prog/tmarkt/main.java:239:	DataflowAnomalyAnalysis: Found 'DU'-anomaly for variable 'team' (lines '239'-'446').
+src/main/java/prog/tmarkt/main.java:239:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:239:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:239:	LocalVariableCouldBeFinal: Local variable 'team' could be declared final
+src/main/java/prog/tmarkt/main.java:239:	LocalVariableCouldBeFinal: Local variable 'team' could be declared final
+src/main/java/prog/tmarkt/main.java:245:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:245:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:246:	AvoidInstantiatingObjectsInLoops: Avoid instantiating new objects inside loops
+src/main/java/prog/tmarkt/main.java:246:	AvoidInstantiatingObjectsInLoops: Avoid instantiating new objects inside loops
+src/main/java/prog/tmarkt/main.java:246:	LocalVariableCouldBeFinal: Local variable 'md' could be declared final
+src/main/java/prog/tmarkt/main.java:246:	LocalVariableCouldBeFinal: Local variable 'md' could be declared final
+src/main/java/prog/tmarkt/main.java:246:	ShortVariable: Avoid variables with short names like md
+src/main/java/prog/tmarkt/main.java:246:	ShortVariable: Avoid variables with short names like md
+src/main/java/prog/tmarkt/main.java:252:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:252:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:253:	AvoidDuplicateLiterals: The String literal "_id" appears 9 times in this file; the first occurrence is on line 253
+src/main/java/prog/tmarkt/main.java:253:	AvoidDuplicateLiterals: The String literal "_id" appears 9 times in this file; the first occurrence is on line 253
+src/main/java/prog/tmarkt/main.java:253:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:253:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:261:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:261:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:262:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:262:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:271:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:271:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:272:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:272:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:273:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:273:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:274:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:274:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:274:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:274:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:276:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:276:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:278:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/main.java:278:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/main.java:278:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:278:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:278:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/main.java:278:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/main.java:279:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:279:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:281:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:281:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:281:	LocalVariableCouldBeFinal: Local variable 'manager' could be declared final
+src/main/java/prog/tmarkt/main.java:281:	LocalVariableCouldBeFinal: Local variable 'manager' could be declared final
+src/main/java/prog/tmarkt/main.java:283:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:283:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:283:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/main.java:283:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/main.java:284:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:284:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:284:	LocalVariableCouldBeFinal: Local variable 'surname' could be declared final
+src/main/java/prog/tmarkt/main.java:284:	LocalVariableCouldBeFinal: Local variable 'surname' could be declared final
+src/main/java/prog/tmarkt/main.java:285:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:285:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:285:	LocalVariableCouldBeFinal: Local variable 'dateofbirth' could be declared final
+src/main/java/prog/tmarkt/main.java:285:	LocalVariableCouldBeFinal: Local variable 'dateofbirth' could be declared final
+src/main/java/prog/tmarkt/main.java:286:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:286:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:286:	LocalVariableCouldBeFinal: Local variable 'currentteam' could be declared final
+src/main/java/prog/tmarkt/main.java:286:	LocalVariableCouldBeFinal: Local variable 'currentteam' could be declared final
+src/main/java/prog/tmarkt/main.java:287:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:287:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:287:	LocalVariableCouldBeFinal: Local variable 'previousteam' could be declared final
+src/main/java/prog/tmarkt/main.java:287:	LocalVariableCouldBeFinal: Local variable 'previousteam' could be declared final
+src/main/java/prog/tmarkt/main.java:288:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:288:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:288:	LocalVariableCouldBeFinal: Local variable 'transferfee' could be declared final
+src/main/java/prog/tmarkt/main.java:288:	LocalVariableCouldBeFinal: Local variable 'transferfee' could be declared final
+src/main/java/prog/tmarkt/main.java:289:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:289:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:289:	LocalVariableCouldBeFinal: Local variable 'amount' could be declared final
+src/main/java/prog/tmarkt/main.java:289:	LocalVariableCouldBeFinal: Local variable 'amount' could be declared final
+src/main/java/prog/tmarkt/main.java:292:	AvoidDuplicateLiterals: The String literal "In Hand" appears 4 times in this file; the first occurrence is on line 292
+src/main/java/prog/tmarkt/main.java:292:	AvoidDuplicateLiterals: The String literal "In Hand" appears 4 times in this file; the first occurrence is on line 292
+src/main/java/prog/tmarkt/main.java:292:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:292:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:292:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:292:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:294:	AvoidDuplicateLiterals: The String literal "Not In Hand" appears 4 times in this file; the first occurrence is on line 294
+src/main/java/prog/tmarkt/main.java:294:	AvoidDuplicateLiterals: The String literal "Not In Hand" appears 4 times in this file; the first occurrence is on line 294
+src/main/java/prog/tmarkt/main.java:294:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:294:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:294:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:294:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:309:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:309:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:310:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:310:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:317:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:317:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:318:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:318:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:319:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:319:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:320:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:320:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:320:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:320:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:322:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:322:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:324:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/main.java:324:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/main.java:324:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:324:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:324:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/main.java:324:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/main.java:325:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:325:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:327:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:327:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:327:	LocalVariableCouldBeFinal: Local variable 'player' could be declared final
+src/main/java/prog/tmarkt/main.java:327:	LocalVariableCouldBeFinal: Local variable 'player' could be declared final
+src/main/java/prog/tmarkt/main.java:329:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:329:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:329:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/main.java:329:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/main.java:330:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:330:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:330:	LocalVariableCouldBeFinal: Local variable 'surname' could be declared final
+src/main/java/prog/tmarkt/main.java:330:	LocalVariableCouldBeFinal: Local variable 'surname' could be declared final
+src/main/java/prog/tmarkt/main.java:331:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:331:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:331:	LocalVariableCouldBeFinal: Local variable 'dateofbirth' could be declared final
+src/main/java/prog/tmarkt/main.java:331:	LocalVariableCouldBeFinal: Local variable 'dateofbirth' could be declared final
+src/main/java/prog/tmarkt/main.java:332:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:332:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:332:	LocalVariableCouldBeFinal: Local variable 'currentteam' could be declared final
+src/main/java/prog/tmarkt/main.java:332:	LocalVariableCouldBeFinal: Local variable 'currentteam' could be declared final
+src/main/java/prog/tmarkt/main.java:333:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:333:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:333:	LocalVariableCouldBeFinal: Local variable 'previousteam' could be declared final
+src/main/java/prog/tmarkt/main.java:333:	LocalVariableCouldBeFinal: Local variable 'previousteam' could be declared final
+src/main/java/prog/tmarkt/main.java:334:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:334:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:334:	LocalVariableCouldBeFinal: Local variable 'status' could be declared final
+src/main/java/prog/tmarkt/main.java:334:	LocalVariableCouldBeFinal: Local variable 'status' could be declared final
+src/main/java/prog/tmarkt/main.java:335:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:335:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:335:	LocalVariableCouldBeFinal: Local variable 'realteam' could be declared final
+src/main/java/prog/tmarkt/main.java:335:	LocalVariableCouldBeFinal: Local variable 'realteam' could be declared final
+src/main/java/prog/tmarkt/main.java:336:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:336:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:336:	LocalVariableCouldBeFinal: Local variable 'dominantfoot' could be declared final
+src/main/java/prog/tmarkt/main.java:336:	LocalVariableCouldBeFinal: Local variable 'dominantfoot' could be declared final
+src/main/java/prog/tmarkt/main.java:337:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:337:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:337:	LocalVariableCouldBeFinal: Local variable 'injuries' could be declared final
+src/main/java/prog/tmarkt/main.java:337:	LocalVariableCouldBeFinal: Local variable 'injuries' could be declared final
+src/main/java/prog/tmarkt/main.java:338:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:338:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:338:	LocalVariableCouldBeFinal: Local variable 'transferfee' could be declared final
+src/main/java/prog/tmarkt/main.java:338:	LocalVariableCouldBeFinal: Local variable 'transferfee' could be declared final
+src/main/java/prog/tmarkt/main.java:339:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:339:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:339:	LocalVariableCouldBeFinal: Local variable 'amount' could be declared final
+src/main/java/prog/tmarkt/main.java:339:	LocalVariableCouldBeFinal: Local variable 'amount' could be declared final
+src/main/java/prog/tmarkt/main.java:342:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:342:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:342:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:342:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:344:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:344:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:344:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:344:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:350:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:350:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:350:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:350:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:352:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:352:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:352:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:352:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:354:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:354:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:354:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:354:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:359:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:359:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:359:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:359:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:361:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:361:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:361:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:361:	PositionLiteralsFirstInComparisons: Position literals first in String comparisons
+src/main/java/prog/tmarkt/main.java:380:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:380:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:381:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:381:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:391:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:391:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:392:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:392:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:393:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:393:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:393:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:393:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:395:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:395:	LocalVariableCouldBeFinal: Local variable 'whereQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:397:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/main.java:397:	CloseResource: Ensure that resources like this DBCursor object are closed after use
+src/main/java/prog/tmarkt/main.java:397:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:397:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:397:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/main.java:397:	LocalVariableCouldBeFinal: Local variable 'cursor' could be declared final
+src/main/java/prog/tmarkt/main.java:398:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:398:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:400:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:400:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:400:	LocalVariableCouldBeFinal: Local variable 'team' could be declared final
+src/main/java/prog/tmarkt/main.java:400:	LocalVariableCouldBeFinal: Local variable 'team' could be declared final
+src/main/java/prog/tmarkt/main.java:402:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:402:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:402:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/main.java:402:	LocalVariableCouldBeFinal: Local variable 'name' could be declared final
+src/main/java/prog/tmarkt/main.java:403:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:403:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:403:	LocalVariableCouldBeFinal: Local variable 'president' could be declared final
+src/main/java/prog/tmarkt/main.java:403:	LocalVariableCouldBeFinal: Local variable 'president' could be declared final
+src/main/java/prog/tmarkt/main.java:404:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:404:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:404:	LocalVariableCouldBeFinal: Local variable 'city' could be declared final
+src/main/java/prog/tmarkt/main.java:404:	LocalVariableCouldBeFinal: Local variable 'city' could be declared final
+src/main/java/prog/tmarkt/main.java:405:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:405:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:405:	LocalVariableCouldBeFinal: Local variable 'stadium' could be declared final
+src/main/java/prog/tmarkt/main.java:405:	LocalVariableCouldBeFinal: Local variable 'stadium' could be declared final
+src/main/java/prog/tmarkt/main.java:406:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:406:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:406:	LocalVariableCouldBeFinal: Local variable 'championshipyears' could be declared final
+src/main/java/prog/tmarkt/main.java:406:	LocalVariableCouldBeFinal: Local variable 'championshipyears' could be declared final
+src/main/java/prog/tmarkt/main.java:407:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:407:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:407:	LocalVariableCouldBeFinal: Local variable 'cups' could be declared final
+src/main/java/prog/tmarkt/main.java:407:	LocalVariableCouldBeFinal: Local variable 'cups' could be declared final
+src/main/java/prog/tmarkt/main.java:408:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:408:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:408:	LocalVariableCouldBeFinal: Local variable 'colors' could be declared final
+src/main/java/prog/tmarkt/main.java:408:	LocalVariableCouldBeFinal: Local variable 'colors' could be declared final
+src/main/java/prog/tmarkt/main.java:409:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:409:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:409:	LocalVariableCouldBeFinal: Local variable 'formationdate' could be declared final
+src/main/java/prog/tmarkt/main.java:409:	LocalVariableCouldBeFinal: Local variable 'formationdate' could be declared final
+src/main/java/prog/tmarkt/main.java:410:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:410:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:410:	LocalVariableCouldBeFinal: Local variable 'league' could be declared final
+src/main/java/prog/tmarkt/main.java:410:	LocalVariableCouldBeFinal: Local variable 'league' could be declared final
+src/main/java/prog/tmarkt/main.java:411:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:411:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:411:	LocalVariableCouldBeFinal: Local variable 'lastmatch' could be declared final
+src/main/java/prog/tmarkt/main.java:411:	LocalVariableCouldBeFinal: Local variable 'lastmatch' could be declared final
+src/main/java/prog/tmarkt/main.java:412:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:412:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:412:	LocalVariableCouldBeFinal: Local variable 'score' could be declared final
+src/main/java/prog/tmarkt/main.java:412:	LocalVariableCouldBeFinal: Local variable 'score' could be declared final
+src/main/java/prog/tmarkt/main.java:437:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:437:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:438:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:438:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:452:	MethodArgumentCouldBeFinal: Parameter 'txtPresName' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:452:	MethodArgumentCouldBeFinal: Parameter 'txtPresName' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:460:	NcssCount: The method 'mongoDatabaseUpdate()' has a NCSS line count of 77.
+src/main/java/prog/tmarkt/main.java:460:	NcssCount: The method 'mongoDatabaseUpdate()' has a NCSS line count of 77.
+src/main/java/prog/tmarkt/main.java:460:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/main.java:460:	SignatureDeclareThrowsException: A method/constructor should not explicitly throw java.lang.Exception
+src/main/java/prog/tmarkt/main.java:461:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:461:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:462:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:462:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:463:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:463:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:464:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:464:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:464:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:464:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:466:	LocalVariableCouldBeFinal: Local variable 'updateFields' could be declared final
+src/main/java/prog/tmarkt/main.java:466:	LocalVariableCouldBeFinal: Local variable 'updateFields' could be declared final
+src/main/java/prog/tmarkt/main.java:471:	LocalVariableCouldBeFinal: Local variable 'setQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:471:	LocalVariableCouldBeFinal: Local variable 'setQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:472:	AvoidDuplicateLiterals: The String literal "$set" appears 4 times in this file; the first occurrence is on line 472
+src/main/java/prog/tmarkt/main.java:472:	AvoidDuplicateLiterals: The String literal "$set" appears 4 times in this file; the first occurrence is on line 472
+src/main/java/prog/tmarkt/main.java:473:	LocalVariableCouldBeFinal: Local variable 'searchQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:473:	LocalVariableCouldBeFinal: Local variable 'searchQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:474:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:474:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:478:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:478:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:479:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:479:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:480:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:480:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:481:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:481:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:481:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:481:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:483:	LocalVariableCouldBeFinal: Local variable 'updateFields' could be declared final
+src/main/java/prog/tmarkt/main.java:483:	LocalVariableCouldBeFinal: Local variable 'updateFields' could be declared final
+src/main/java/prog/tmarkt/main.java:491:	LocalVariableCouldBeFinal: Local variable 'setQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:491:	LocalVariableCouldBeFinal: Local variable 'setQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:493:	LocalVariableCouldBeFinal: Local variable 'searchQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:493:	LocalVariableCouldBeFinal: Local variable 'searchQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:494:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:494:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:498:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:498:	AvoidLiteralsInIfCondition: Avoid using Literals in Conditional Statements
+src/main/java/prog/tmarkt/main.java:499:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:499:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:500:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:500:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:501:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:501:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:501:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:501:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:503:	LocalVariableCouldBeFinal: Local variable 'updateFields' could be declared final
+src/main/java/prog/tmarkt/main.java:503:	LocalVariableCouldBeFinal: Local variable 'updateFields' could be declared final
+src/main/java/prog/tmarkt/main.java:515:	LocalVariableCouldBeFinal: Local variable 'setQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:515:	LocalVariableCouldBeFinal: Local variable 'setQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:517:	LocalVariableCouldBeFinal: Local variable 'searchQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:517:	LocalVariableCouldBeFinal: Local variable 'searchQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:518:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:518:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:524:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:524:	LocalVariableCouldBeFinal: Local variable 'mongoClient' could be declared final
+src/main/java/prog/tmarkt/main.java:525:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:525:	LocalVariableCouldBeFinal: Local variable 'database' could be declared final
+src/main/java/prog/tmarkt/main.java:526:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:526:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:526:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:526:	LocalVariableCouldBeFinal: Local variable 'collection' could be declared final
+src/main/java/prog/tmarkt/main.java:528:	LocalVariableCouldBeFinal: Local variable 'updateFields' could be declared final
+src/main/java/prog/tmarkt/main.java:528:	LocalVariableCouldBeFinal: Local variable 'updateFields' could be declared final
+src/main/java/prog/tmarkt/main.java:541:	LocalVariableCouldBeFinal: Local variable 'setQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:541:	LocalVariableCouldBeFinal: Local variable 'setQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:543:	LocalVariableCouldBeFinal: Local variable 'searchQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:543:	LocalVariableCouldBeFinal: Local variable 'searchQuery' could be declared final
+src/main/java/prog/tmarkt/main.java:544:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:544:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/prog/tmarkt/main.java:555:	ExcessiveMethodLength: Avoid really long methods.
+src/main/java/prog/tmarkt/main.java:555:	ExcessiveMethodLength: Avoid really long methods.
+src/main/java/prog/tmarkt/main.java:555:	ModifiedCyclomaticComplexity: The method 'initialize' has a Modified Cyclomatic Complexity of 40.
+src/main/java/prog/tmarkt/main.java:555:	ModifiedCyclomaticComplexity: The method 'initialize' has a Modified Cyclomatic Complexity of 40.
+src/main/java/prog/tmarkt/main.java:555:	NPathComplexity: The method 'initialize()' has an NPath complexity of 65536
+src/main/java/prog/tmarkt/main.java:555:	NPathComplexity: The method 'initialize()' has an NPath complexity of 65536
+src/main/java/prog/tmarkt/main.java:555:	NcssCount: The method 'initialize()' has a NCSS line count of 477.
+src/main/java/prog/tmarkt/main.java:555:	NcssCount: The method 'initialize()' has a NCSS line count of 477.
+src/main/java/prog/tmarkt/main.java:555:	NcssMethodCount: The method initialize() has an NCSS line count of 477
+src/main/java/prog/tmarkt/main.java:555:	NcssMethodCount: The method initialize() has an NCSS line count of 477
+src/main/java/prog/tmarkt/main.java:555:	StdCyclomaticComplexity: The method 'initialize' has a Standard Cyclomatic Complexity of 40.
+src/main/java/prog/tmarkt/main.java:555:	StdCyclomaticComplexity: The method 'initialize' has a Standard Cyclomatic Complexity of 40.
+src/main/java/prog/tmarkt/main.java:559:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:559:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:561:	LocalVariableCouldBeFinal: Local variable 'format' could be declared final
+src/main/java/prog/tmarkt/main.java:561:	LocalVariableCouldBeFinal: Local variable 'format' could be declared final
+src/main/java/prog/tmarkt/main.java:561:	SimpleDateFormatNeedsLocale: When instantiating a SimpleDateFormat object, specify a Locale
+src/main/java/prog/tmarkt/main.java:561:	SimpleDateFormatNeedsLocale: When instantiating a SimpleDateFormat object, specify a Locale
+src/main/java/prog/tmarkt/main.java:573:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:573:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/prog/tmarkt/main.java:574:	LocalVariableCouldBeFinal: Local variable 'pTeam' could be declared final
+src/main/java/prog/tmarkt/main.java:574:	LocalVariableCouldBeFinal: Local variable 'pTeam' could be declared final
+src/main/java/prog/tmarkt/main.java:578:	AvoidDuplicateLiterals: The String literal "Name :" appears 8 times in this file; the first occurrence is on line 578
+src/main/java/prog/tmarkt/main.java:578:	AvoidDuplicateLiterals: The String literal "Name :" appears 8 times in this file; the first occurrence is on line 578
+src/main/java/prog/tmarkt/main.java:578:	LocalVariableCouldBeFinal: Local variable 'lblName_1' could be declared final
+src/main/java/prog/tmarkt/main.java:578:	LocalVariableCouldBeFinal: Local variable 'lblName_1' could be declared final
+src/main/java/prog/tmarkt/main.java:578:	LocalVariableNamingConventions: The local variable name 'lblName_1' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/prog/tmarkt/main.java:578:	LocalVariableNamingConventions: The local variable name 'lblName_1' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/prog/tmarkt/main.java:578:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'lblName_1' is not final.
+src/main/java/prog/tmarkt/main.java:578:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'lblName_1' is not final.
+src/main/java/prog/tmarkt/main.java:579:	AvoidDuplicateLiterals: The String literal "Tahoma" appears 63 times in this file; the first occurrence is on line 579
+src/main/java/prog/tmarkt/main.java:579:	AvoidDuplicateLiterals: The String literal "Tahoma" appears 63 times in this file; the first occurrence is on line 579
+src/main/java/prog/tmarkt/main.java:583:	LocalVariableCouldBeFinal: Local variable 'lblColors' could be declared final
+src/main/java/prog/tmarkt/main.java:583:	LocalVariableCouldBeFinal: Local variable 'lblColors' could be declared final
+src/main/java/prog/tmarkt/main.java:588:	LocalVariableCouldBeFinal: Local variable 'lblCity' could be declared final
+src/main/java/prog/tmarkt/main.java:588:	LocalVariableCouldBeFinal: Local variable 'lblCity' could be declared final
+src/main/java/prog/tmarkt/main.java:593:	LocalVariableCouldBeFinal: Local variable 'lblStadium' could be declared final
+src/main/java/prog/tmarkt/main.java:593:	LocalVariableCouldBeFinal: Local variable 'lblStadium' could be declared final
+src/main/java/prog/tmarkt/main.java:598:	LocalVariableCouldBeFinal: Local variable 'lblFormationDate' could be declared final
+src/main/java/prog/tmarkt/main.java:598:	LocalVariableCouldBeFinal: Local variable 'lblFormationDate' could be declared final
+src/main/java/prog/tmarkt/main.java:603:	LocalVariableCouldBeFinal: Local variable 'lblPresident' could be declared final
+src/main/java/prog/tmarkt/main.java:603:	LocalVariableCouldBeFinal: Local variable 'lblPresident' could be declared final
+src/main/java/prog/tmarkt/main.java:608:	LocalVariableCouldBeFinal: Local variable 'lblChampionshipYears' could be declared final
+src/main/java/prog/tmarkt/main.java:608:	LocalVariableCouldBeFinal: Local variable 'lblChampionshipYears' could be declared final
+src/main/java/prog/tmarkt/main.java:608:	LongVariable: Avoid excessively long variable names like lblChampionshipYears
+src/main/java/prog/tmarkt/main.java:608:	LongVariable: Avoid excessively long variable names like lblChampionshipYears
+src/main/java/prog/tmarkt/main.java:613:	LocalVariableCouldBeFinal: Local variable 'lblLeague' could be declared final
+src/main/java/prog/tmarkt/main.java:613:	LocalVariableCouldBeFinal: Local variable 'lblLeague' could be declared final
+src/main/java/prog/tmarkt/main.java:618:	LocalVariableCouldBeFinal: Local variable 'lblCups' could be declared final
+src/main/java/prog/tmarkt/main.java:618:	LocalVariableCouldBeFinal: Local variable 'lblCups' could be declared final
+src/main/java/prog/tmarkt/main.java:623:	LocalVariableCouldBeFinal: Local variable 'lblLastMatch' could be declared final
+src/main/java/prog/tmarkt/main.java:623:	LocalVariableCouldBeFinal: Local variable 'lblLastMatch' could be declared final
+src/main/java/prog/tmarkt/main.java:628:	LocalVariableCouldBeFinal: Local variable 'lblSrore' could be declared final
+src/main/java/prog/tmarkt/main.java:628:	LocalVariableCouldBeFinal: Local variable 'lblSrore' could be declared final
+src/main/java/prog/tmarkt/main.java:633:	AvoidDuplicateLiterals: The String literal "Submit" appears 4 times in this file; the first occurrence is on line 633
+src/main/java/prog/tmarkt/main.java:633:	AvoidDuplicateLiterals: The String literal "Submit" appears 4 times in this file; the first occurrence is on line 633
+src/main/java/prog/tmarkt/main.java:633:	LocalVariableCouldBeFinal: Local variable 'btnTSubmit' could be declared final
+src/main/java/prog/tmarkt/main.java:633:	LocalVariableCouldBeFinal: Local variable 'btnTSubmit' could be declared final
+src/main/java/prog/tmarkt/main.java:639:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:639:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:639:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:639:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:639:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:639:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:642:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:642:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:644:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:644:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:728:	LocalVariableCouldBeFinal: Local variable 'lblTFind' could be declared final
+src/main/java/prog/tmarkt/main.java:728:	LocalVariableCouldBeFinal: Local variable 'lblTFind' could be declared final
+src/main/java/prog/tmarkt/main.java:734:	AvoidDuplicateLiterals: The String literal "Find" appears 8 times in this file; the first occurrence is on line 734
+src/main/java/prog/tmarkt/main.java:734:	AvoidDuplicateLiterals: The String literal "Find" appears 8 times in this file; the first occurrence is on line 734
+src/main/java/prog/tmarkt/main.java:734:	LocalVariableCouldBeFinal: Local variable 'btnTFind' could be declared final
+src/main/java/prog/tmarkt/main.java:734:	LocalVariableCouldBeFinal: Local variable 'btnTFind' could be declared final
+src/main/java/prog/tmarkt/main.java:737:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:737:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:740:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:740:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:740:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:740:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:740:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:740:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:743:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:743:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:745:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:745:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:754:	AvoidDuplicateLiterals: The String literal "Update" appears 4 times in this file; the first occurrence is on line 754
+src/main/java/prog/tmarkt/main.java:754:	AvoidDuplicateLiterals: The String literal "Update" appears 4 times in this file; the first occurrence is on line 754
+src/main/java/prog/tmarkt/main.java:754:	LocalVariableCouldBeFinal: Local variable 'btnTeamUpdate' could be declared final
+src/main/java/prog/tmarkt/main.java:754:	LocalVariableCouldBeFinal: Local variable 'btnTeamUpdate' could be declared final
+src/main/java/prog/tmarkt/main.java:760:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:760:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:760:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:760:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:760:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:760:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:763:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:763:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:765:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:765:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:774:	LocalVariableCouldBeFinal: Local variable 'chckboxTFind' could be declared final
+src/main/java/prog/tmarkt/main.java:774:	LocalVariableCouldBeFinal: Local variable 'chckboxTFind' could be declared final
+src/main/java/prog/tmarkt/main.java:784:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:784:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:784:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:784:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:875:	LocalVariableCouldBeFinal: Local variable 'btnTShowPlayers' could be declared final
+src/main/java/prog/tmarkt/main.java:875:	LocalVariableCouldBeFinal: Local variable 'btnTShowPlayers' could be declared final
+src/main/java/prog/tmarkt/main.java:882:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:882:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:882:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:882:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:882:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:882:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:883:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
+src/main/java/prog/tmarkt/main.java:883:	LocalVariableCouldBeFinal: Local variable 'p' could be declared final
+src/main/java/prog/tmarkt/main.java:883:	ShortVariable: Avoid variables with short names like p
+src/main/java/prog/tmarkt/main.java:883:	ShortVariable: Avoid variables with short names like p
+src/main/java/prog/tmarkt/main.java:891:	LocalVariableCouldBeFinal: Local variable 'pPlayer' could be declared final
+src/main/java/prog/tmarkt/main.java:891:	LocalVariableCouldBeFinal: Local variable 'pPlayer' could be declared final
+src/main/java/prog/tmarkt/main.java:895:	LocalVariableCouldBeFinal: Local variable 'lblPName' could be declared final
+src/main/java/prog/tmarkt/main.java:895:	LocalVariableCouldBeFinal: Local variable 'lblPName' could be declared final
+src/main/java/prog/tmarkt/main.java:900:	LocalVariableCouldBeFinal: Local variable 'lblPSurname' could be declared final
+src/main/java/prog/tmarkt/main.java:900:	LocalVariableCouldBeFinal: Local variable 'lblPSurname' could be declared final
+src/main/java/prog/tmarkt/main.java:905:	LocalVariableCouldBeFinal: Local variable 'lblPDateOfBirth' could be declared final
+src/main/java/prog/tmarkt/main.java:905:	LocalVariableCouldBeFinal: Local variable 'lblPDateOfBirth' could be declared final
+src/main/java/prog/tmarkt/main.java:910:	LocalVariableCouldBeFinal: Local variable 'lblPCurrTeam' could be declared final
+src/main/java/prog/tmarkt/main.java:910:	LocalVariableCouldBeFinal: Local variable 'lblPCurrTeam' could be declared final
+src/main/java/prog/tmarkt/main.java:915:	LocalVariableCouldBeFinal: Local variable 'lblPPrevTeams' could be declared final
+src/main/java/prog/tmarkt/main.java:915:	LocalVariableCouldBeFinal: Local variable 'lblPPrevTeams' could be declared final
+src/main/java/prog/tmarkt/main.java:920:	LocalVariableCouldBeFinal: Local variable 'lblPStatus' could be declared final
+src/main/java/prog/tmarkt/main.java:920:	LocalVariableCouldBeFinal: Local variable 'lblPStatus' could be declared final
+src/main/java/prog/tmarkt/main.java:925:	LocalVariableCouldBeFinal: Local variable 'lblPRealteam' could be declared final
+src/main/java/prog/tmarkt/main.java:925:	LocalVariableCouldBeFinal: Local variable 'lblPRealteam' could be declared final
+src/main/java/prog/tmarkt/main.java:930:	LocalVariableCouldBeFinal: Local variable 'lblPDomFoot' could be declared final
+src/main/java/prog/tmarkt/main.java:930:	LocalVariableCouldBeFinal: Local variable 'lblPDomFoot' could be declared final
+src/main/java/prog/tmarkt/main.java:935:	LocalVariableCouldBeFinal: Local variable 'lblPTransFee' could be declared final
+src/main/java/prog/tmarkt/main.java:935:	LocalVariableCouldBeFinal: Local variable 'lblPTransFee' could be declared final
+src/main/java/prog/tmarkt/main.java:940:	LocalVariableCouldBeFinal: Local variable 'lblPInjuries' could be declared final
+src/main/java/prog/tmarkt/main.java:940:	LocalVariableCouldBeFinal: Local variable 'lblPInjuries' could be declared final
+src/main/java/prog/tmarkt/main.java:971:	LocalVariableCouldBeFinal: Local variable 'lblAmount_1' could be declared final
+src/main/java/prog/tmarkt/main.java:971:	LocalVariableCouldBeFinal: Local variable 'lblAmount_1' could be declared final
+src/main/java/prog/tmarkt/main.java:971:	LocalVariableNamingConventions: The local variable name 'lblAmount_1' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/prog/tmarkt/main.java:971:	LocalVariableNamingConventions: The local variable name 'lblAmount_1' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/prog/tmarkt/main.java:971:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'lblAmount_1' is not final.
+src/main/java/prog/tmarkt/main.java:971:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'lblAmount_1' is not final.
+src/main/java/prog/tmarkt/main.java:1004:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1004:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1004:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1004:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1013:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1013:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1013:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1013:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1054:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1054:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1054:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1054:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1063:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1063:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1063:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1063:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1069:	LocalVariableCouldBeFinal: Local variable 'pManager' could be declared final
+src/main/java/prog/tmarkt/main.java:1069:	LocalVariableCouldBeFinal: Local variable 'pManager' could be declared final
+src/main/java/prog/tmarkt/main.java:1073:	LocalVariableCouldBeFinal: Local variable 'lblManName' could be declared final
+src/main/java/prog/tmarkt/main.java:1073:	LocalVariableCouldBeFinal: Local variable 'lblManName' could be declared final
+src/main/java/prog/tmarkt/main.java:1078:	LocalVariableCouldBeFinal: Local variable 'lblManSurname' could be declared final
+src/main/java/prog/tmarkt/main.java:1078:	LocalVariableCouldBeFinal: Local variable 'lblManSurname' could be declared final
+src/main/java/prog/tmarkt/main.java:1083:	LocalVariableCouldBeFinal: Local variable 'lblManDoB' could be declared final
+src/main/java/prog/tmarkt/main.java:1083:	LocalVariableCouldBeFinal: Local variable 'lblManDoB' could be declared final
+src/main/java/prog/tmarkt/main.java:1088:	LocalVariableCouldBeFinal: Local variable 'lblManCTeam' could be declared final
+src/main/java/prog/tmarkt/main.java:1088:	LocalVariableCouldBeFinal: Local variable 'lblManCTeam' could be declared final
+src/main/java/prog/tmarkt/main.java:1093:	LocalVariableCouldBeFinal: Local variable 'lblManPTeams' could be declared final
+src/main/java/prog/tmarkt/main.java:1093:	LocalVariableCouldBeFinal: Local variable 'lblManPTeams' could be declared final
+src/main/java/prog/tmarkt/main.java:1098:	LocalVariableCouldBeFinal: Local variable 'lblManTransferFee' could be declared final
+src/main/java/prog/tmarkt/main.java:1098:	LocalVariableCouldBeFinal: Local variable 'lblManTransferFee' could be declared final
+src/main/java/prog/tmarkt/main.java:1120:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1120:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1120:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1120:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1130:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1130:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1130:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1130:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1136:	LocalVariableCouldBeFinal: Local variable 'lblManAmount' could be declared final
+src/main/java/prog/tmarkt/main.java:1136:	LocalVariableCouldBeFinal: Local variable 'lblManAmount' could be declared final
+src/main/java/prog/tmarkt/main.java:1144:	LocalVariableCouldBeFinal: Local variable 'btnManSubmit' could be declared final
+src/main/java/prog/tmarkt/main.java:1144:	LocalVariableCouldBeFinal: Local variable 'btnManSubmit' could be declared final
+src/main/java/prog/tmarkt/main.java:1146:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1146:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1146:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1146:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1146:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1146:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1149:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1149:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1151:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1151:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1167:	LocalVariableCouldBeFinal: Local variable 'btnPSubmit' could be declared final
+src/main/java/prog/tmarkt/main.java:1167:	LocalVariableCouldBeFinal: Local variable 'btnPSubmit' could be declared final
+src/main/java/prog/tmarkt/main.java:1169:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1169:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1169:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1169:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1169:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1169:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1172:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1172:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1174:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1174:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1198:	LocalVariableCouldBeFinal: Local variable 'lblPFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1198:	LocalVariableCouldBeFinal: Local variable 'lblPFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1210:	LocalVariableCouldBeFinal: Local variable 'btnPFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1210:	LocalVariableCouldBeFinal: Local variable 'btnPFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1213:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1213:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1216:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1216:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1216:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1216:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1216:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1216:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1219:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1219:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1221:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1221:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1230:	LocalVariableCouldBeFinal: Local variable 'btnPUpdate' could be declared final
+src/main/java/prog/tmarkt/main.java:1230:	LocalVariableCouldBeFinal: Local variable 'btnPUpdate' could be declared final
+src/main/java/prog/tmarkt/main.java:1233:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1233:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1236:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1236:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1236:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1236:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1236:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1236:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1239:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1239:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1241:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1241:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1253:	LocalVariableCouldBeFinal: Local variable 'chckboxPFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1253:	LocalVariableCouldBeFinal: Local variable 'chckboxPFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1263:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1263:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1263:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1263:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1378:	LocalVariableCouldBeFinal: Local variable 'lblManFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1378:	LocalVariableCouldBeFinal: Local variable 'lblManFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1385:	LocalVariableCouldBeFinal: Local variable 'btnManFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1385:	LocalVariableCouldBeFinal: Local variable 'btnManFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1388:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1388:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1391:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1391:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1391:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1391:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1391:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1391:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1394:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1394:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1396:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1396:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1405:	LocalVariableCouldBeFinal: Local variable 'btnManUpdate' could be declared final
+src/main/java/prog/tmarkt/main.java:1405:	LocalVariableCouldBeFinal: Local variable 'btnManUpdate' could be declared final
+src/main/java/prog/tmarkt/main.java:1408:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1408:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1411:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1411:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1411:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1411:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1411:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1411:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1414:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1414:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1416:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1416:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1425:	LocalVariableCouldBeFinal: Local variable 'chckboxManFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1425:	LocalVariableCouldBeFinal: Local variable 'chckboxManFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1435:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1435:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1435:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1435:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1498:	LocalVariableCouldBeFinal: Local variable 'pPres' could be declared final
+src/main/java/prog/tmarkt/main.java:1498:	LocalVariableCouldBeFinal: Local variable 'pPres' could be declared final
+src/main/java/prog/tmarkt/main.java:1502:	LocalVariableCouldBeFinal: Local variable 'lblPresName' could be declared final
+src/main/java/prog/tmarkt/main.java:1502:	LocalVariableCouldBeFinal: Local variable 'lblPresName' could be declared final
+src/main/java/prog/tmarkt/main.java:1507:	LocalVariableCouldBeFinal: Local variable 'lblPresSurname' could be declared final
+src/main/java/prog/tmarkt/main.java:1507:	LocalVariableCouldBeFinal: Local variable 'lblPresSurname' could be declared final
+src/main/java/prog/tmarkt/main.java:1512:	LocalVariableCouldBeFinal: Local variable 'lblPresDateOfBirth' could be declared final
+src/main/java/prog/tmarkt/main.java:1512:	LocalVariableCouldBeFinal: Local variable 'lblPresDateOfBirth' could be declared final
+src/main/java/prog/tmarkt/main.java:1512:	LongVariable: Avoid excessively long variable names like lblPresDateOfBirth
+src/main/java/prog/tmarkt/main.java:1512:	LongVariable: Avoid excessively long variable names like lblPresDateOfBirth
+src/main/java/prog/tmarkt/main.java:1517:	LocalVariableCouldBeFinal: Local variable 'lblPresTeam' could be declared final
+src/main/java/prog/tmarkt/main.java:1517:	LocalVariableCouldBeFinal: Local variable 'lblPresTeam' could be declared final
+src/main/java/prog/tmarkt/main.java:1543:	LocalVariableCouldBeFinal: Local variable 'btnPresSubmit' could be declared final
+src/main/java/prog/tmarkt/main.java:1543:	LocalVariableCouldBeFinal: Local variable 'btnPresSubmit' could be declared final
+src/main/java/prog/tmarkt/main.java:1545:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1545:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1545:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1545:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1545:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1545:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1548:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1548:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1550:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1550:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1567:	LocalVariableCouldBeFinal: Local variable 'lblPresFindName' could be declared final
+src/main/java/prog/tmarkt/main.java:1567:	LocalVariableCouldBeFinal: Local variable 'lblPresFindName' could be declared final
+src/main/java/prog/tmarkt/main.java:1579:	LocalVariableCouldBeFinal: Local variable 'btnPresUpdate' could be declared final
+src/main/java/prog/tmarkt/main.java:1579:	LocalVariableCouldBeFinal: Local variable 'btnPresUpdate' could be declared final
+src/main/java/prog/tmarkt/main.java:1582:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1582:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1585:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1585:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1585:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1585:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1585:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1585:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1588:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1588:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1590:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1590:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1599:	LocalVariableCouldBeFinal: Local variable 'btnPresFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1599:	LocalVariableCouldBeFinal: Local variable 'btnPresFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1602:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1602:	CommentSize: Comment is too large: Line too long
+src/main/java/prog/tmarkt/main.java:1605:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1605:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1605:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1605:	MissingOverride: The method 'actionPerformed(ActionEvent)' is missing an @Override annotation.
+src/main/java/prog/tmarkt/main.java:1605:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1605:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1609:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1609:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/prog/tmarkt/main.java:1611:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1611:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/prog/tmarkt/main.java:1620:	LocalVariableCouldBeFinal: Local variable 'chckbxPresFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1620:	LocalVariableCouldBeFinal: Local variable 'chckbxPresFind' could be declared final
+src/main/java/prog/tmarkt/main.java:1630:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1630:	MethodArgumentCouldBeFinal: Parameter 'e' is not assigned and could be declared final
+src/main/java/prog/tmarkt/main.java:1630:	ShortVariable: Avoid variables with short names like e
+src/main/java/prog/tmarkt/main.java:1630:	ShortVariable: Avoid variables with short names like e
